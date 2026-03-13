@@ -119,7 +119,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                 className,
             )}
         >
-            <div className="flex size-full max-w-7xl flex-1 items-center px-4 md:px-6 lg:px-8 border-l border-r border-secondary">
+            <div className="flex size-full w-full max-w-7xl flex-1 items-center px-4 md:px-6 lg:px-8 border-l border-r border-secondary">
                 <div
                     className={cx(
                         "flex w-full items-center justify-between gap-6",

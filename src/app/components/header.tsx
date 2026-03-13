@@ -283,7 +283,7 @@ export const Header = () => {
         <header ref={headerRef} className="relative bg-primary border-b border-secondary">
             {/* Main Navigation */}
             <nav className="bg-primary">
-                <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                <div className="max-w-7xl mx-auto px-6 lg:px-4  ">
                     <div className="flex items-center justify-between h-16 lg:h-16">
                         {/* Logo + Navigation */}
                         <div className="flex items-center gap-8">
