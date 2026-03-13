@@ -109,7 +109,7 @@ const HeroSection = ({
             <div className="mx-auto h-full max-w-7xl">
                 <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left Column - Text Content */}
-                    <div className="flex flex-col justify-center pl-4 md:pl-6 lg:pl-8">
+                    <div className="flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 pl-4 md:pl-6 lg:pl-8">
                         {/* Headline */}
                         <h1 className="font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl">
                             {headline ?? defaultHeadline}
@@ -143,14 +143,6 @@ const HeroSection = ({
                     {/* Right Column - QR Code Share UI */}
                     <div className="flex h-full w-full items-center justify-center bg-gray-100 p-8">
                         <div className="flex w-full max-w-md flex-col gap-4">
-                            {/* Share Profile Button */}
-                            <div className="flex justify-end">
-                                <button className="flex items-center gap-2 rounded-full border border-secondary bg-primary px-4 py-2 text-sm font-medium text-primary shadow-sm transition duration-100 ease-linear hover:bg-primary_hover">
-                                    Share profile
-                                    <ChevronDown className="size-4 text-fg-quaternary" />
-                                </button>
-                            </div>
-
                             {/* QR Code Card */}
                             <div className="rounded-2xl border border-secondary bg-primary p-6 shadow-lg">
                                 {/* Header */}
