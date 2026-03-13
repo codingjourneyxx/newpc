@@ -175,7 +175,7 @@ const HeroSection = ({
                     </div>
 
                     {/* Right Column - QR Code Share UI */}
-                    <div className="flex h-full w-full items-center justify-center bg-gray-100 p-8">
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-8">
                         <div className="flex w-full max-w-md flex-col gap-4">
                             {/* QR Code Card */}
                             <div className="rounded-2xl border border-secondary bg-primary p-6 shadow-lg">
