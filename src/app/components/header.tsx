@@ -149,7 +149,7 @@ const MegaMenuDropdown = ({
 
     return (
         <div
-            className="absolute left-0 right-0 top-full z-50 bg-primary overflow-hidden"
+            className="absolute left-0 right-0 top-full z-50 bg-white overflow-hidden"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
