@@ -156,16 +156,36 @@ export const FeatureSection = ({
                         )}
                     </div>
 
-                    {/* Right - Testimonial (1/3) */}
+                    {/* Right - Testimonial with Background Image (1/3) */}
                     {testimonial && (
-                        <div className="hidden lg:block lg:w-[34%]">
-                            <Testimonial
-                                quote={testimonial.quote}
-                                author={testimonial.author}
-                                role={testimonial.role}
-                                badge={testimonial.badge}
-                            />
-                        </div>
+                        <aside className="relative hidden overflow-hidden rounded-2xl lg:block lg:w-[34%]">
+                            {/* Background Image Placeholder */}
+                            <div className="absolute inset-0 bg-tertiary">
+                                <div className="flex h-full items-center justify-center text-quaternary">
+                                    Image
+                                </div>
+                            </div>
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
+                            {/* Content */}
+                            <div className="relative z-10 flex h-full min-h-[400px] flex-col justify-end p-6 text-white">
+                                {/* Company Logo / Badge */}
+                                {testimonial.badge && (
+                                    <div className="mb-4 flex h-6 items-center">
+                                        <span className="text-sm font-semibold text-white/80">{testimonial.badge}</span>
+                                    </div>
+                                )}
+                                {/* Quote */}
+                                <blockquote className="font-serif text-base italic leading-relaxed text-white/90">
+                                    "{testimonial.quote}"
+                                </blockquote>
+                                {/* Author */}
+                                <div className="mt-4 text-sm">
+                                    <p className="font-semibold">{testimonial.author}</p>
+                                    <p className="text-white/70">{testimonial.role}</p>
+                                </div>
+                            </div>
+                        </aside>
                     )}
                 </div>
 

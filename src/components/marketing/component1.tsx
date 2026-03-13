@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
-import { CompHeader } from "@/components/marketing/comp-header";
+import { Header } from "@/app/components/header";
 import { cx } from "@/utils/cx";
 
 interface AnnouncementBannerProps {
@@ -175,14 +175,20 @@ export const Component1 = ({
 }: Component1Props) => {
     return (
         <div className={cx("min-h-screen bg-primary", className)}>
-            {/* Announcement Banner */}
-            <AnnouncementBanner text={announcementText} href={announcementHref} />
-
             {/* Header */}
-            <CompHeader logo={<IncidentLogo />} />
+            <Header />
 
             {/* Hero Section */}
             <HeroSection />
+
+            {/* Full Width Big Image */}
+            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 sm:px-6 lg:px-8">
+                <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl bg-tertiary">
+                    <div className="flex h-full items-center justify-center text-quaternary">
+                        Big Image Placeholder
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
