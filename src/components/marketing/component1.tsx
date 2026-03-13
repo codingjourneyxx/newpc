@@ -102,12 +102,12 @@ const HeroSection = ({
     return (
         <section
             className={cx(
-                "px-4 py-16 md:py-24 lg:py-32",
+                "h-[800px]",
                 className
             )}
         >
-            <div className="mx-auto max-w-7xl">
-                <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="mx-auto h-full max-w-7xl">
+                <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left Column - Text Content */}
                     <div className="flex flex-col justify-center">
                         {/* Headline */}
@@ -141,7 +141,7 @@ const HeroSection = ({
                     </div>
 
                     {/* Right Column - Image (Full Height) */}
-                    <div className="aspect-square w-full overflow-hidden rounded-2xl bg-tertiary lg:aspect-auto lg:h-full lg:min-h-[400px]">
+                    <div className="aspect-square w-full overflow-hidden bg-tertiary lg:aspect-auto lg:h-full">
                         <div className="flex h-full items-center justify-center text-quaternary">
                             Masjid Image
                         </div>
