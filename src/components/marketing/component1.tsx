@@ -141,7 +141,7 @@ const HeroSection = ({
                             <Button
                                 href={primaryCtaHref}
                                 size="xl"
-                                iconTrailing={<ArrowUpRight data-icon className="size-5 text-white" />}
+                                iconTrailing={<ArrowUpRight data-icon className="!text-white" />}
                                 className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
                             >
                                 {primaryCtaText}
