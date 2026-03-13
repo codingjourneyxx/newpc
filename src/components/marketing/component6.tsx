@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageSquare02, AlignLeft, GitBranch01, BookOpen02 } from "@untitledui/icons";
+import { BookOpen01, GraduationHat01, Users01, Star01 } from "@untitledui/icons";
 import { FeatureSection } from "./feature-section";
 import { cx } from "@/utils/cx";
 
@@ -10,23 +10,23 @@ interface Component6Props {
 
 export const Component6 = ({ className }: Component6Props) => {
     const tabs = [
-        { icon: MessageSquare02, label: "Slack & Teams", isActive: false },
-        { icon: AlignLeft, label: "Scribe", isActive: false },
-        { icon: GitBranch01, label: "Workflows", isActive: true },
-        { icon: BookOpen02, label: "Catalog", isActive: false },
+        { icon: BookOpen01, label: "Quran Classes", isActive: false },
+        { icon: GraduationHat01, label: "Islamic Studies", isActive: true },
+        { icon: Users01, label: "Hifz Program", isActive: false },
+        { icon: Star01, label: "Arabic Language", isActive: false },
     ];
 
     return (
         <FeatureSection
-            badge="Response"
-            title="Response lets you fix faster, with fewer people"
-            description="Accelerated by AI and deeply integrated with Slack and Microsoft Teams, fix issues faster, automate workflows, and ensure consistent resolution."
-            ctaText="Discover Response"
+            badge="Madrasa"
+            title="Nurturing young minds with Islamic education"
+            description="Our Madrasa will provide quality Islamic education including Quran memorization, Hadith studies, Fiqh, and Arabic language for children and adults."
+            ctaText="Learn About Madrasa"
             testimonial={{
-                quote: "If I could point to the single most impactful thing we did to change the culture at Airbnb, it would be rolling out incident.io and democratizing incident response.",
-                author: "Nils Pommerien",
-                role: "Director, SRE",
-                badge: "Response",
+                quote: "The best among you are those who learn the Quran and teach it. This Madrasa will be a beacon of knowledge for our village.",
+                author: "Hafiz Muhammad",
+                role: "Quran Teacher",
+                badge: "Madrasa",
             }}
             tabs={tabs}
             className={className}

@@ -21,21 +21,19 @@ type HeaderNavItem = {
 
 const headerNavItems: HeaderNavItem[] = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "#about" },
-    { label: "Campaigns", href: "#campaigns" },
-    { label: "Events", href: "#events" },
+    { label: "About", href: "#about" },
+    { label: "Our Mission", href: "#mission" },
+    { label: "Donate", href: "#donate" },
     { label: "Contact", href: "#contact" },
 ];
 
 const footerNavItems = [
-    { label: "About us", href: "/" },
-    { label: "Press", href: "/products" },
-    { label: "Careers", href: "/resources" },
-    { label: "Legal", href: "/pricing" },
-    { label: "Support", href: "/pricing" },
-    { label: "Contact", href: "/pricing" },
-    { label: "Sitemap", href: "/pricing" },
-    { label: "Cookie settings", href: "/pricing" },
+    { label: "About Us", href: "#about" },
+    { label: "Our Mission", href: "#mission" },
+    { label: "Donate", href: "#donate" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Contact", href: "#contact" },
+    { label: "FAQ", href: "#faq" },
 ];
 
 const MobileNavItem = (props: { className?: string; label: string; href?: string; children?: ReactNode }) => {
@@ -90,11 +88,11 @@ const MobileFooter = () => {
                 ))}
             </ul>
             <div className="flex flex-col gap-3">
-                <Button size="lg" color="primary">
-                    Sign up
+                <Button size="lg" color="primary" className="bg-emerald-600 hover:bg-emerald-700">
+                    Donate Now
                 </Button>
                 <Button color="secondary" size="lg">
-                    Log in
+                    Learn More
                 </Button>
             </div>
         </div>
@@ -202,10 +200,10 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                     {/* Right Actions */}
                     <div className="hidden items-center gap-2 md:flex">
                         <Button color="tertiary" size="sm">
-                            Log in
+                            Learn More
                         </Button>
-                        <Button color="primary" size="sm">
-                            Sign up
+                        <Button color="primary" size="sm" className="bg-emerald-600 hover:bg-emerald-700">
+                            Donate Now
                         </Button>
                     </div>
 

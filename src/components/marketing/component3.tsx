@@ -2,37 +2,23 @@
 
 import { cx } from "@/utils/cx";
 
-interface ChatBubbleProps {
+interface DuaBubbleProps {
     message: string;
+    author: string;
     align?: "left" | "right";
 }
 
-const ChatBubble = ({ message, align = "left" }: ChatBubbleProps) => (
+const DuaBubble = ({ message, author, align = "left" }: DuaBubbleProps) => (
     <div
         className={cx(
-            "relative max-w-xs rounded-2xl px-4 py-3 text-sm font-medium",
+            "relative max-w-sm rounded-2xl px-5 py-4",
             align === "left"
-                ? "ml-0 mr-auto bg-green-light-400/30 text-green-light-950"
-                : "ml-auto mr-0 bg-green-light-950/20 text-green-light-950"
+                ? "ml-0 mr-auto bg-white/30 text-white"
+                : "ml-auto mr-0 bg-white/20 text-white"
         )}
     >
-        {message}
-        {/* Tail */}
-        <div
-            className={cx(
-                "absolute bottom-0 size-3",
-                align === "left" ? "-left-1" : "-right-1"
-            )}
-        />
-    </div>
-);
-
-/** Typing Indicator */
-const TypingIndicator = () => (
-    <div className="flex max-w-xs items-center gap-1 rounded-2xl bg-green-light-400/30 px-4 py-3">
-        <span className="size-2 animate-bounce rounded-full bg-green-light-700" style={{ animationDelay: "0ms" }} />
-        <span className="size-2 animate-bounce rounded-full bg-green-light-700" style={{ animationDelay: "150ms" }} />
-        <span className="size-2 animate-bounce rounded-full bg-green-light-700" style={{ animationDelay: "300ms" }} />
+        <p className="text-sm font-medium italic">"{message}"</p>
+        <p className="mt-2 text-xs opacity-80">- {author}</p>
     </div>
 );
 
@@ -41,35 +27,42 @@ interface Component3Props {
 }
 
 export const Component3 = ({ className }: Component3Props) => {
-    const chatMessages = [
-        { message: "Everything's red. Send help.", align: "left" as const },
-        { message: "Which server is it?", align: "right" as const },
-        { message: "Did you check the logs?", align: "right" as const },
+    const duas = [
+        { message: "May Allah accept your donation and reward you abundantly", author: "Village Elder", align: "left" as const },
+        { message: "JazakAllah Khair for supporting our community", author: "Imam Sahab", align: "right" as const },
+        { message: "Every rupee counts towards this noble cause", author: "Committee Member", align: "left" as const },
     ];
 
     return (
         <section className={cx("w-full", className)}>
-            <div className="mx-auto max-w-7xl border-l border-r border-secondary bg-green-light-500 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+            <div className="mx-auto max-w-7xl border-l border-r border-secondary bg-emerald-600 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
                 <div className="mx-auto max-w-3xl">
-                {/* Chat Bubbles */}
-                <div className="flex flex-col gap-3">
-                    {chatMessages.map((chat, index) => (
-                        <ChatBubble key={index} message={chat.message} align={chat.align} />
-                    ))}
-                    <TypingIndicator />
-                </div>
+                    {/* Dua Bubbles */}
+                    <div className="flex flex-col gap-4">
+                        {duas.map((dua, index) => (
+                            <DuaBubble key={index} message={dua.message} author={dua.author} align={dua.align} />
+                        ))}
+                    </div>
 
-                {/* Headline */}
-                <h2 className="mt-12 text-center font-serif text-3xl font-normal italic tracking-tight text-white md:text-4xl lg:text-5xl">
-                    Things go <span className="not-italic">wrong.</span> All the time.
-                </h2>
+                    {/* Headline */}
+                    <h2 className="mt-12 text-center font-serif text-3xl font-normal italic tracking-tight text-white md:text-4xl lg:text-5xl">
+                        Every <span className="not-italic">contribution</span> matters
+                    </h2>
 
-                {/* Description */}
-                <p className="mt-6 text-center text-lg text-green-light-100 md:text-xl">
-                    From minor issues to global outages, incidents are
-                    <br className="hidden md:block" />
-                    inevitable. But chaos doesn't have to be.
-                </p>
+                    {/* Description */}
+                    <p className="mt-6 text-center text-lg text-emerald-100 md:text-xl">
+                        Your 1 Rupee contribution will help build a place of worship
+                        <br className="hidden md:block" />
+                        and education for generations to come.
+                    </p>
+
+                    {/* Quran Verse */}
+                    <div className="mt-8 text-center">
+                        <p className="text-emerald-200 italic text-md">
+                            "Whoever builds a mosque for Allah, Allah will build for him a house in Paradise"
+                        </p>
+                        <p className="text-emerald-300 text-sm mt-2">- Sahih Bukhari</p>
+                    </div>
                 </div>
             </div>
         </section>

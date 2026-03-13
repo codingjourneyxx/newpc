@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe01, Bell03, Users01, BarChart07 } from "@untitledui/icons";
+import { Heart, Gift01, Users01, Home02 } from "@untitledui/icons";
 import { FeatureSection } from "./feature-section";
 import { cx } from "@/utils/cx";
 
@@ -10,23 +10,23 @@ interface Component8Props {
 
 export const Component8 = ({ className }: Component8Props) => {
     const tabs = [
-        { icon: Globe01, label: "Public pages", isActive: false },
-        { icon: Bell03, label: "Notifications", isActive: true },
-        { icon: Users01, label: "Internal pages", isActive: false },
-        { icon: BarChart07, label: "Analytics", isActive: false },
+        { icon: Heart, label: "Orphan Support", isActive: false },
+        { icon: Gift01, label: "Zakat & Sadaqah", isActive: true },
+        { icon: Users01, label: "Widow Support", isActive: false },
+        { icon: Home02, label: "Housing Aid", isActive: false },
     ];
 
     return (
         <FeatureSection
-            badge="Status Pages"
-            title="Status Pages keep customers in the loop"
-            description="Transparent, automated, and effortless. Keep your customers updated, reduce inbound support, and maintain trust when things go wrong."
-            ctaText="Discover Status Pages"
+            badge="Welfare"
+            title="Supporting the needy in our community"
+            description="A portion of donations will establish a welfare fund for orphans, widows, and families in need. Your contribution creates lasting impact."
+            ctaText="Welfare Programs"
             testimonial={{
-                quote: "We replaced a slow, outdated status page with incident.io, giving us a faster, more automated way to keep customers informed. One of the biggest benefits was the alignment it created between engineering and customer success.",
-                author: "Iris Milanoff",
-                role: "TPM Reliability, Square",
-                badge: "Status Pages",
+                quote: "Charity does not decrease wealth. This welfare center will ensure no one in our village goes to sleep hungry.",
+                author: "Fatima Begum",
+                role: "Women's Committee",
+                badge: "Welfare",
             }}
             tabs={tabs}
             className={className}

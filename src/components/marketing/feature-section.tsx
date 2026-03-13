@@ -86,7 +86,7 @@ export const FeatureSection = ({
                             color="link-color"
                             size="md"
                             iconTrailing={ArrowRight}
-                            className="mt-4 text-green-light-600 hover:text-green-light-700"
+                            className="mt-4 text-emerald-600 hover:text-emerald-700"
                         >
                             {ctaText}
                         </Button>
@@ -95,7 +95,7 @@ export const FeatureSection = ({
                     {/* Right - Badge */}
                     {badge && (
                         <div className="flex items-center gap-2 rounded-full border border-secondary px-3 py-1.5">
-                            <span className="size-2 rounded-full bg-green-light-500" />
+                            <span className="size-2 rounded-full bg-emerald-500" />
                             <span className="text-sm font-medium text-primary">{badge}</span>
                         </div>
                     )}
@@ -122,7 +122,7 @@ export const FeatureSection = ({
                                                 className={cx(
                                                     "flex items-center gap-1 transition duration-100 ease-linear",
                                                     tab.isActive
-                                                        ? "text-green-light-600"
+                                                        ? "text-emerald-600"
                                                         : "hover:text-secondary"
                                                 )}
                                             >
@@ -145,7 +145,7 @@ export const FeatureSection = ({
                                                 className={cx(
                                                     "size-2 rounded-full transition-all duration-200",
                                                     tab.isActive
-                                                        ? "w-10 bg-green-light-500"
+                                                        ? "w-10 bg-emerald-500"
                                                         : "bg-gray-200 hover:bg-gray-300"
                                                 )}
                                             />

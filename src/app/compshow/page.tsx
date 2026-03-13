@@ -12,34 +12,34 @@ import { Component10 } from "@/components/marketing/component10";
 export default function CompShowPage() {
     return (
         <div className="min-h-screen bg-primary">
-            {/* Component 1: Hero Section with Header & Announcement Banner */}
+            {/* Component 1: Hero Section - Masjid & Madrasa Appeal */}
             <Component1 />
 
-            {/* Component 2: Social Proof with G2 Rating */}
+            {/* Component 2: Donation Progress & Stats */}
             <Component2 />
 
-            {/* Component 3: Chat Bubbles Section */}
+            {/* Component 3: Community Messages & Duas */}
             <Component3 />
 
-            {/* Component 4: Command Center with Feature Cards */}
+            {/* Component 4: Project Features (Masjid, Madrasa, etc.) */}
             <Component4 />
 
-            {/* Component 5: On-call Feature Section */}
+            {/* Component 5: Masjid Feature Section */}
             <Component5 />
 
-            {/* Component 6: Response Feature Section */}
+            {/* Component 6: Madrasa Feature Section */}
             <Component6 />
 
-            {/* Component 7: AI SRE Feature Section */}
+            {/* Component 7: Community Hall Feature Section */}
             <Component7 />
 
-            {/* Component 8: Status Pages Feature Section */}
+            {/* Component 8: Welfare Programs Feature Section */}
             <Component8 />
 
-            {/* Component 9: Customer Stories Section */}
+            {/* Component 9: Donor Appreciation Section */}
             <Component9 />
 
-            {/* Component 10: CTA Section */}
+            {/* Component 10: Final CTA & Donation Info */}
             <Component10 />
         </div>
     );

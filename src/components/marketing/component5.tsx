@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone01, Bell01, Calendar, BarLineChart } from "@untitledui/icons";
+import { Home02, Clock, Users01, BookOpen01 } from "@untitledui/icons";
 import { FeatureSection } from "./feature-section";
 import { cx } from "@/utils/cx";
 
@@ -10,23 +10,23 @@ interface Component5Props {
 
 export const Component5 = ({ className }: Component5Props) => {
     const tabs = [
-        { icon: Phone01, label: "Mobile app", isActive: false },
-        { icon: Bell01, label: "Alerting", isActive: false },
-        { icon: Calendar, label: "Scheduling", isActive: true },
-        { icon: BarLineChart, label: "Trends", isActive: false },
+        { icon: Home02, label: "Prayer Hall", isActive: false },
+        { icon: Clock, label: "5 Daily Prayers", isActive: true },
+        { icon: Users01, label: "Jummah", isActive: false },
+        { icon: BookOpen01, label: "Taraweeh", isActive: false },
     ];
 
     return (
         <FeatureSection
-            badge="On-call"
-            title="On-call gets the right people in the room"
-            description="On-call designed for humans—effortless scheduling, a delightful on-call experience, and powered by AI to cut noise and reduce pages."
-            ctaText="Discover On-call"
+            badge="Masjid"
+            title="A sacred space for worship and reflection"
+            description="Our mosque will accommodate 500+ worshippers for daily prayers, Jummah congregation, and special prayers during Ramadan and Eid."
+            ctaText="Learn More About Masjid"
             testimonial={{
-                quote: "Nobody likes getting paged, but incident.io makes it painless—you get to the work that matters fast. They're thinking about fast-growing companies like us and actually building for our needs.",
-                author: "Brian Scanlan",
-                role: "Senior Principal Engineer",
-                badge: "On-call",
+                quote: "Building a mosque is one of the greatest acts of Sadaqah Jariyah. The rewards continue as long as people pray there.",
+                author: "Maulana Abdullah",
+                role: "Village Imam",
+                badge: "Masjid",
             }}
             tabs={tabs}
             className={className}

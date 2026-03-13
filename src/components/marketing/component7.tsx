@@ -1,6 +1,6 @@
 "use client";
 
-import { FileCode01, Stars01, Users01, File01 } from "@untitledui/icons";
+import { Users01, Heart, Home02, Gift01 } from "@untitledui/icons";
 import { FeatureSection } from "./feature-section";
 import { cx } from "@/utils/cx";
 
@@ -10,23 +10,23 @@ interface Component7Props {
 
 export const Component7 = ({ className }: Component7Props) => {
     const tabs = [
-        { icon: FileCode01, label: "Draft a PR", isActive: false },
-        { icon: Stars01, label: "Suggest next steps", isActive: true },
-        { icon: Users01, label: "Investigate together", isActive: false },
-        { icon: File01, label: "Draft the comms", isActive: false },
+        { icon: Users01, label: "Community Hall", isActive: false },
+        { icon: Heart, label: "Welfare Programs", isActive: true },
+        { icon: Home02, label: "Guest Rooms", isActive: false },
+        { icon: Gift01, label: "Zakat Distribution", isActive: false },
     ];
 
     return (
         <FeatureSection
-            badge="AI SRE"
-            title="AI SRE resolves incidents like your best engineer"
-            description="From spotting the failing PR to suggesting the fix, AI SRE investigates issues, surfaces next steps, and helps bring your systems back to health—even while you're sleeping."
-            ctaText="Discover AI SRE"
+            badge="Community"
+            title="A gathering place for our village community"
+            description="Beyond prayers, our center will host community events, weddings, educational seminars, and welfare programs to strengthen bonds within our village."
+            ctaText="Community Programs"
             testimonial={{
-                quote: "Incidents are all hands on deck. An incident comes in and whoever is needed and can help will drop everything to manage it. And of course, we use incident.io for the coordination and communication, and for getting the Slack channel and zoom calls set up. It's very straightforward.",
-                author: "Sabin Roman",
-                role: "Engineering manager",
-                badge: "AI SRE",
+                quote: "This project will unite our village. A place where we can come together for prayers, celebrations, and support each other in times of need.",
+                author: "Ahmed Khan",
+                role: "Village Committee Head",
+                badge: "Community",
             }}
             tabs={tabs}
             className={className}
