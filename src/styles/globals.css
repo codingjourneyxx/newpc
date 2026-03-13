@@ -113,3 +113,29 @@ input[type="search"]::-webkit-search-cancel-button {
     animation-delay: 300ms;
     opacity: 0;
 }
+
+/* Custom Scrollbar with Aurora Background */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: url('/rightcolbg.jpg') center/cover no-repeat;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.9;
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #10b981 #f1f5f9;
+}
