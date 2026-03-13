@@ -107,16 +107,24 @@ const HeroSection = ({
             )}
         >
             <div className="mx-auto h-full max-w-7xl">
-                <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+                <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-0">
                     {/* Left Column - Text Content */}
-                    <div className="flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 pl-4 md:pl-6 lg:pl-8">
+                    <div className="relative flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 pl-4 md:pl-6 lg:pl-8">
+                        {/* Dot Pattern Background */}
+                        <div
+                            className="pointer-events-none absolute inset-0 opacity-[0.15]"
+                            style={{
+                                backgroundImage: 'radial-gradient(circle, #059669 1px, transparent 1px)',
+                                backgroundSize: '20px 20px'
+                            }}
+                        />
                         {/* Headline */}
                         <h1 className="font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl">
                             {headline ?? defaultHeadline}
                         </h1>
 
                         {/* Description */}
-                        <p className="mt-6 text-lg text-secondary md:text-xl">
+                        <p className="mt-6 text-lg text-secondary md:text-md">
                             {description}
                         </p>
 
