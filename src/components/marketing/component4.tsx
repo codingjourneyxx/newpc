@@ -1,6 +1,6 @@
 "use client";
 
-import { Home02, BookOpen01, Users01, Heart, Star01, Building07, GraduationHat01, Mosque } from "@untitledui/icons";
+import { Home02, BookOpen01, Users01, Heart, Star01, Building07, GraduationHat01 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import type { FC } from "react";
