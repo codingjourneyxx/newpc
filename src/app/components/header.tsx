@@ -280,9 +280,9 @@ export const Header = () => {
     }, []);
 
     return (
-        <header ref={headerRef} className="relative bg-primary border-b border-secondary">
+        <header ref={headerRef} className="relative bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm">
             {/* Main Navigation */}
-            <nav className="bg-primary">
+            <nav className="bg-transparent">
                 <div className="max-w-7xl mx-auto px-6 lg:px-4  ">
                     <div className="flex items-center justify-between h-16 lg:h-16">
                         {/* Logo + Navigation */}
