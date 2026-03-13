@@ -60,15 +60,9 @@ export const Component10 = ({ className }: Component10Props) => {
                     <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-secondary sm:mt-6 sm:text-base">
                         Your contribution, no matter how small, will help build a place of worship and learning for our community.
                     </p>
-                    <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-secondary">
-                        आपका योगदान, चाहे कितना भी छोटा हो, हमारे समुदाय के लिए इबादत और तालीम की जगह बनाने में मदद करेगा।
-                    </p>
 
                     <p className="mx-auto mt-4 max-w-xl text-center text-sm font-semibold text-emerald-600 sm:text-base">
                         "May Allah reward you with goodness" - Jazakallahu Khairan
-                    </p>
-                    <p className="mx-auto mt-1 text-center text-sm font-semibold text-emerald-600">
-                        جزاك اللهُ خيرًا - जज़ाकल्लाह खैर!
                     </p>
                 </div>
 
