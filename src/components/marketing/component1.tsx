@@ -125,7 +125,7 @@ const HeroSection = ({
                             <Button
                                 href={primaryCtaHref}
                                 size="xl"
-                                className="rounded-lg bg-emerald-600 hover:bg-emerald-700 data-[loading]:bg-emerald-700"
+                                className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
                             >
                                 {primaryCtaText}
                             </Button>
