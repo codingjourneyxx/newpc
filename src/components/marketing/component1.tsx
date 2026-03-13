@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowLeft, ChevronDown, Link01, Copy01, Download01, Trash01, ShieldTick, CheckVerified01, Receipt } from "@untitledui/icons";
+import { ArrowRight, ArrowLeft, ChevronDown, Link01, Copy01, Download01, Trash01, ShieldTick, CheckVerified01, Receipt, ArrowUpRight } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Header } from "@/app/components/header";
 import { cx } from "@/utils/cx";
@@ -109,7 +109,7 @@ const HeroSection = ({
             <div className="mx-auto h-full max-w-7xl">
                 <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-0">
                     {/* Left Column - Text Content */}
-                    <div className="relative flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 pl-4 md:pl-6 lg:pl-8">
+                    <div className="relative flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 px-4 md:pl-6 lg:px-8">
                         {/* Dot Pattern Background */}
                         <div
                             className="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -124,15 +124,24 @@ const HeroSection = ({
                         </h1>
 
                         {/* Description */}
-                        <p className="mt-6 text-lg text-secondary md:text-md">
-                            {description}
-                        </p>
+                        <div className="mt-6 space-y-3">
+                            <p className="text-lg leading-relaxed text-secondary md:text-xl">
+                                An appeal is made to all <span className="font-semibold text-primary">Islamic brothers</span> for a contribution of{" "}
+                                <span className="font-bold text-emerald-600">₹1 rupee</span> for the construction of this{" "}
+                                <span className="font-semibold italic text-emerald-700">mosque and madrasa</span> in our village.
+                            </p>
+                        
+                            <p className="text-lg font-medium  text-emerald-600 md:text-xl">
+                                "May Allah reward you with goodness"
+                            </p>
+                        </div>
 
                         {/* CTA Buttons */}
                         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
                             <Button
                                 href={primaryCtaHref}
                                 size="xl"
+                                iconTrailing={<ArrowUpRight data-icon className="size-5 text-white" />}
                                 className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
                             >
                                 {primaryCtaText}
@@ -141,6 +150,7 @@ const HeroSection = ({
                                 href={secondaryCtaHref}
                                 color="secondary"
                                 size="xl"
+                                iconTrailing={ArrowUpRight}
                                 className="rounded-lg"
                             >
                                 {secondaryCtaText}
