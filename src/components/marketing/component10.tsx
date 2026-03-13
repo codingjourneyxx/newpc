@@ -39,30 +39,30 @@ const FeatureItem = ({ children }: { children: string }) => (
 
 /** Donation Info Card */
 const DonationInfoCard = () => (
-    <div className="overflow-hidden rounded-xl border border-emerald-200 bg-emerald-50 shadow-xl">
+    <div className="overflow-hidden rounded-lg border border-emerald-200 bg-emerald-50 shadow-xl sm:rounded-xl">
         {/* Header */}
-        <div className="flex items-center gap-2 border-b border-emerald-200 bg-emerald-100 px-4 py-3">
-            <Heart className="size-5 text-emerald-600" />
-            <span className="font-semibold text-emerald-700">Ways to Donate</span>
+        <div className="flex items-center gap-2 border-b border-emerald-200 bg-emerald-100 px-3 py-2.5 sm:px-4 sm:py-3">
+            <Heart className="size-4 text-emerald-600 sm:size-5" />
+            <span className="text-sm font-semibold text-emerald-700 sm:text-base">Ways to Donate</span>
         </div>
         {/* Content */}
-        <div className="p-6 space-y-4">
+        <div className="p-4 space-y-3 sm:p-6 sm:space-y-4">
             {/* Bank Details */}
-            <div className="rounded-lg bg-white p-4 border border-emerald-200">
-                <p className="text-sm font-semibold text-emerald-700">Bank Transfer</p>
-                <p className="text-xs text-secondary mt-1">Account Name: Masjid & Madrasa Fund</p>
-                <p className="text-xs text-secondary">Account No: XXXX-XXXX-XXXX</p>
-                <p className="text-xs text-secondary">IFSC: XXXXXXX</p>
+            <div className="rounded-lg bg-white p-3 border border-emerald-200 sm:p-4">
+                <p className="text-xs font-semibold text-emerald-700 sm:text-sm">Bank Transfer</p>
+                <p className="text-[10px] text-secondary mt-1 sm:text-xs">Account Name: Masjid & Madrasa Fund</p>
+                <p className="text-[10px] text-secondary sm:text-xs">Account No: XXXX-XXXX-XXXX</p>
+                <p className="text-[10px] text-secondary sm:text-xs">IFSC: XXXXXXX</p>
             </div>
             {/* UPI */}
-            <div className="rounded-lg bg-white p-4 border border-emerald-200">
-                <p className="text-sm font-semibold text-emerald-700">UPI Payment</p>
-                <p className="text-xs text-secondary mt-1">UPI ID: masjid@upi</p>
+            <div className="rounded-lg bg-white p-3 border border-emerald-200 sm:p-4">
+                <p className="text-xs font-semibold text-emerald-700 sm:text-sm">UPI Payment</p>
+                <p className="text-[10px] text-secondary mt-1 sm:text-xs">UPI ID: masjid@upi</p>
             </div>
             {/* Contact */}
-            <div className="rounded-lg bg-white p-4 border border-emerald-200">
-                <p className="text-sm font-semibold text-emerald-700">Cash Donation</p>
-                <p className="text-xs text-secondary mt-1">Contact Committee: +91 XXXXX XXXXX</p>
+            <div className="rounded-lg bg-white p-3 border border-emerald-200 sm:p-4">
+                <p className="text-xs font-semibold text-emerald-700 sm:text-sm">Cash Donation</p>
+                <p className="text-[10px] text-secondary mt-1 sm:text-xs">Contact Committee: +91 XXXXX XXXXX</p>
             </div>
         </div>
     </div>
@@ -88,50 +88,50 @@ export const Component10 = ({ className }: Component10Props) => {
 
     return (
         <section className={cx("w-full", className)}>
-            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
                 {/* Illustration */}
                 <MosqueIllustration />
 
                 {/* Headline */}
-                <h2 className="mt-8 text-center font-serif text-3xl font-normal italic tracking-tight text-primary md:text-4xl lg:text-5xl">
+                <h2 className="mt-6 text-center font-serif text-2xl font-normal italic tracking-tight text-primary sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl">
                     Be part of this
                     <br />
                     <span className="text-emerald-600">blessed journey</span>
                 </h2>
 
                 {/* Description */}
-                <p className="mx-auto mt-6 max-w-xl text-center text-lg text-secondary">
+                <p className="mx-auto mt-4 max-w-xl text-center text-base text-secondary sm:mt-6 sm:text-lg">
                     Your contribution, no matter how small, will help build
                     a place of worship and learning for our community.
                 </p>
 
                 {/* Islamic Blessing */}
-                <p className="mx-auto mt-4 max-w-xl text-center text-md text-emerald-600 font-medium italic">
+                <p className="mx-auto mt-3 max-w-xl text-center text-sm text-emerald-600 font-medium italic sm:mt-4 sm:text-base">
                     "May Allah reward you with goodness" - Jazakallahu Khairan
                 </p>
 
                 {/* Content Area */}
-                <div className="mt-12 grid gap-8 lg:grid-cols-2">
+                <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-8 lg:grid-cols-2">
                     {/* Left - Donation Info */}
                     <DonationInfoCard />
 
                     {/* Right - Features & CTA */}
-                    <div className="flex flex-col justify-center rounded-2xl border border-emerald-200 bg-emerald-50/50 p-8">
-                        <h3 className="text-lg font-semibold text-primary">
+                    <div className="flex flex-col justify-center rounded-xl border border-emerald-200 bg-emerald-50/50 p-4 sm:rounded-2xl sm:p-8">
+                        <h3 className="text-base font-semibold text-primary sm:text-lg">
                             Why donate to this cause?
                         </h3>
 
-                        <div className="mt-6 space-y-4">
+                        <div className="mt-4 space-y-3 sm:mt-6 sm:space-y-4">
                             {features.map((feature, index) => (
                                 <FeatureItem key={index}>{feature}</FeatureItem>
                             ))}
                         </div>
 
-                        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
                             <Button
                                 href="#donate"
                                 size="lg"
-                                className="rounded-full bg-emerald-600 hover:bg-emerald-700"
+                                className="w-full rounded-full bg-emerald-600 hover:bg-emerald-700 sm:w-auto"
                             >
                                 Donate Now
                             </Button>
@@ -140,15 +140,15 @@ export const Component10 = ({ className }: Component10Props) => {
                                 size="lg"
                                 color="secondary"
                                 iconLeading={Share07}
-                                className="rounded-full"
+                                className="w-full rounded-full sm:w-auto"
                             >
                                 Share With Others
                             </Button>
                         </div>
 
-                        <div className="mt-6 flex items-center gap-3">
+                        <div className="mt-4 flex items-center gap-3 sm:mt-6">
                             <CommitteeAvatars />
-                            <span className="text-sm text-secondary">Village Committee Members</span>
+                            <span className="text-xs text-secondary sm:text-sm">Village Committee Members</span>
                         </div>
                     </div>
                 </div>

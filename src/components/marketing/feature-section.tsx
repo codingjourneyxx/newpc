@@ -197,12 +197,12 @@ export const FeatureSection = ({
 
                 {/* Mobile Testimonial */}
                 {testimonial && (
-                    <div className="mt-6 lg:hidden">
-                        <div className="rounded-2xl bg-gray-900 p-6 text-white">
-                            <blockquote className="font-serif text-base italic leading-relaxed text-white/90">
+                    <div className="mt-4 sm:mt-6 lg:hidden">
+                        <div className="rounded-xl bg-gray-900 p-4 text-white sm:rounded-2xl sm:p-6">
+                            <blockquote className="font-serif text-sm italic leading-relaxed text-white/90 sm:text-base">
                                 "{testimonial.quote}"
                             </blockquote>
-                            <div className="mt-4 text-sm">
+                            <div className="mt-3 text-xs sm:mt-4 sm:text-sm">
                                 <p className="font-semibold">{testimonial.author}</p>
                                 <p className="text-white/70">{testimonial.role}</p>
                             </div>
