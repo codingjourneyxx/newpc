@@ -2,12 +2,52 @@
 
 import { cx } from "@/utils/cx";
 import { Building07, BookOpen01, Users01, Heart } from "@untitledui/icons";
+import type { FC } from "react";
+
+interface FeatureCardProps {
+    icon: FC<{ className?: string }>;
+    title: string;
+    description: string;
+}
+
+const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
+    <div className="group rounded-md bg-white/10 backdrop-blur-md border border-white/20 p-2 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02] sm:rounded-2xl sm:p-6">
+        <div className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 sm:size-12 sm:rounded-xl">
+            <Icon className="size-4 text-white sm:size-6" />
+        </div>
+        <h3 className="mt-3 text-sm font-semibold text-white sm:mt-4 sm:text-lg">{title}</h3>
+        <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">{description}</p>
+    </div>
+);
 
 interface Component3Props {
     className?: string;
 }
 
 export const Component3 = ({ className }: Component3Props) => {
+    const features = [
+        {
+            icon: Building07,
+            title: "Masjid",
+            description: "A beautiful mosque for daily prayers and Friday gatherings",
+        },
+        {
+            icon: BookOpen01,
+            title: "Madrasa",
+            description: "Islamic education center for children and adults",
+        },
+        {
+            icon: Users01,
+            title: "Community Hall",
+            description: "Space for weddings, events and community gatherings",
+        },
+        {
+            icon: Heart,
+            title: "Welfare Programs",
+            description: "Support for orphans, widows and families in need",
+        },
+    ];
+
     return (
         <section className={cx("w-full relative overflow-hidden", className)}>
             {/* Background with aurora image */}
@@ -34,41 +74,14 @@ export const Component3 = ({ className }: Component3Props) => {
 
                     {/* Feature Cards */}
                     <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-16 sm:gap-6 lg:grid-cols-4">
-                        {/* Card 1 - Masjid */}
-                        <div className="group rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02] sm:rounded-2xl sm:p-6">
-                            <div className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 sm:size-12 sm:rounded-xl">
-                                <Building07 className="size-4 text-white sm:size-6" />
-                            </div>
-                            <h3 className="mt-3 text-sm font-semibold text-white sm:mt-4 sm:text-lg">Masjid</h3>
-                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">A beautiful mosque for daily prayers and Friday gatherings</p>
-                        </div>
-
-                        {/* Card 2 - Madrasa */}
-                        <div className="group rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02] sm:rounded-2xl sm:p-6">
-                            <div className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 sm:size-12 sm:rounded-xl">
-                                <BookOpen01 className="size-4 text-white sm:size-6" />
-                            </div>
-                            <h3 className="mt-3 text-sm font-semibold text-white sm:mt-4 sm:text-lg">Madrasa</h3>
-                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Islamic education center for children and adults</p>
-                        </div>
-
-                        {/* Card 3 - Community */}
-                        <div className="group rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02] sm:rounded-2xl sm:p-6">
-                            <div className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 sm:size-12 sm:rounded-xl">
-                                <Users01 className="size-4 text-white sm:size-6" />
-                            </div>
-                            <h3 className="mt-3 text-sm font-semibold text-white sm:mt-4 sm:text-lg">Community Hall</h3>
-                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Space for weddings, events and community gatherings</p>
-                        </div>
-
-                        {/* Card 4 - Welfare */}
-                        <div className="group rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-4 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02] sm:rounded-2xl sm:p-6">
-                            <div className="flex size-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 sm:size-12 sm:rounded-xl">
-                                <Heart className="size-4 text-white sm:size-6" />
-                            </div>
-                            <h3 className="mt-3 text-sm font-semibold text-white sm:mt-4 sm:text-lg">Welfare Programs</h3>
-                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Support for orphans, widows and families in need</p>
-                        </div>
+                        {features.map((feature, index) => (
+                            <FeatureCard
+                                key={index}
+                                icon={feature.icon}
+                                title={feature.title}
+                                description={feature.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

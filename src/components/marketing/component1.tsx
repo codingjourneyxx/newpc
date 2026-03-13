@@ -199,7 +199,7 @@ const HeroSection = ({
                                             <img
                                                 src="/qr-code.jpeg"
                                                 alt="Scan to donate via UPI"
-                                                className="size-40 object-contain sm:size-48 md:size-60"
+                                                className="h-60 w-full object-contain sm:size-48 md:size-60"
                                             />
                                         </div>
                                     </div>
