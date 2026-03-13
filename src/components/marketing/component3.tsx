@@ -1,67 +1,74 @@
 "use client";
 
 import { cx } from "@/utils/cx";
-
-interface DuaBubbleProps {
-    message: string;
-    author: string;
-    align?: "left" | "right";
-}
-
-const DuaBubble = ({ message, author, align = "left" }: DuaBubbleProps) => (
-    <div
-        className={cx(
-            "relative max-w-sm rounded-2xl px-5 py-4",
-            align === "left"
-                ? "ml-0 mr-auto bg-white/30 text-white"
-                : "ml-auto mr-0 bg-white/20 text-white"
-        )}
-    >
-        <p className="text-sm font-medium italic">"{message}"</p>
-        <p className="mt-2 text-xs opacity-80">- {author}</p>
-    </div>
-);
+import { Building07, BookOpen01, Users01, Heart } from "@untitledui/icons";
 
 interface Component3Props {
     className?: string;
 }
 
 export const Component3 = ({ className }: Component3Props) => {
-    const duas = [
-        { message: "May Allah accept your donation and reward you abundantly", author: "Village Elder", align: "left" as const },
-        { message: "JazakAllah Khair for supporting our community", author: "Imam Sahab", align: "right" as const },
-        { message: "Every rupee counts towards this noble cause", author: "Committee Member", align: "left" as const },
-    ];
-
     return (
-        <section className={cx("w-full", className)}>
-            <div className="mx-auto max-w-7xl border-l border-r border-secondary bg-emerald-600 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-                <div className="mx-auto max-w-3xl">
-                    {/* Dua Bubbles */}
-                    <div className="flex flex-col gap-4">
-                        {duas.map((dua, index) => (
-                            <DuaBubble key={index} message={dua.message} author={dua.author} align={dua.align} />
-                        ))}
-                    </div>
+        <section className={cx("w-full relative overflow-hidden", className)}>
+            {/* Background with aurora image */}
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/rightcolbg.jpg')" }}
+            />
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/40 via-transparent to-emerald-900/60" />
 
+            <div className="relative mx-auto max-w-7xl border-l border-r border-white/10 px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+                <div className="mx-auto max-w-4xl">
                     {/* Headline */}
-                    <h2 className="mt-12 text-center font-serif text-3xl font-normal italic tracking-tight text-white md:text-4xl lg:text-5xl">
-                        Every <span className="not-italic">contribution</span> matters
+                    <h2 className="text-center font-serif text-4xl font-normal italic tracking-tight text-white md:text-5xl lg:text-6xl">
+                        Every <span className="not-italic font-semibold bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">contribution</span> matters
                     </h2>
 
                     {/* Description */}
-                    <p className="mt-6 text-center text-lg text-emerald-100 md:text-xl">
-                        Your 1 Rupee contribution will help build a place of worship
+                    <p className="mt-8 text-center text-lg leading-relaxed text-white/80 md:text-xl">
+                        Your <span className="font-semibold text-emerald-300">₹1 Rupee</span> contribution will help build a place of worship
                         <br className="hidden md:block" />
                         and education for generations to come.
                     </p>
 
-                    {/* Quran Verse */}
-                    <div className="mt-8 text-center">
-                        <p className="text-emerald-200 italic text-md">
-                            "Whoever builds a mosque for Allah, Allah will build for him a house in Paradise"
-                        </p>
-                        <p className="text-emerald-300 text-sm mt-2">- Sahih Bukhari</p>
+                    {/* Feature Cards */}
+                    <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        {/* Card 1 - Masjid */}
+                        <div className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02]">
+                            <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-400">
+                                <Building07 className="size-6 text-white" />
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-white">Masjid</h3>
+                            <p className="mt-2 text-sm text-white/70">A beautiful mosque for daily prayers and Friday gatherings</p>
+                        </div>
+
+                        {/* Card 2 - Madrasa */}
+                        <div className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02]">
+                            <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-400">
+                                <BookOpen01 className="size-6 text-white" />
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-white">Madrasa</h3>
+                            <p className="mt-2 text-sm text-white/70">Islamic education center for children and adults</p>
+                        </div>
+
+                        {/* Card 3 - Community */}
+                        <div className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02]">
+                            <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-400">
+                                <Users01 className="size-6 text-white" />
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-white">Community Hall</h3>
+                            <p className="mt-2 text-sm text-white/70">Space for weddings, events and community gatherings</p>
+                        </div>
+
+                        {/* Card 4 - Welfare */}
+                        <div className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 transition-all duration-300 hover:bg-white/15 hover:scale-[1.02]">
+                            <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-400">
+                                <Heart className="size-6 text-white" />
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-white">Welfare Programs</h3>
+                            <p className="mt-2 text-sm text-white/70">Support for orphans, widows and families in need</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -56,6 +56,7 @@ interface FeatureSectionProps {
     tabs?: TabItem[];
     className?: string;
     children?: ReactNode;
+    image?: string;
 }
 
 export const FeatureSection = ({
@@ -67,6 +68,7 @@ export const FeatureSection = ({
     testimonial,
     tabs,
     className,
+    image,
 }: FeatureSectionProps) => {
     return (
         <section className={cx("w-full", className)}>
@@ -107,9 +109,13 @@ export const FeatureSection = ({
                     <div className="flex w-full flex-col gap-4 md:gap-6 lg:max-w-[66%]">
                         {/* Image Placeholder - Carousel would go here */}
                         <div className="aspect-[350/300] w-full overflow-hidden rounded-2xl bg-tertiary">
-                            <div className="flex h-full items-center justify-center text-quaternary">
-                                Image Placeholder
-                            </div>
+                            {image ? (
+                                <img src={image} alt="" className="h-full w-full object-cover" />
+                            ) : (
+                                <div className="flex h-full items-center justify-center text-quaternary">
+                                    Image Placeholder
+                                </div>
+                            )}
                         </div>
 
                         {/* Tabs */}
