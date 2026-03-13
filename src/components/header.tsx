@@ -88,7 +88,7 @@ const MobileFooter = () => {
                 ))}
             </ul>
             <div className="flex flex-col gap-3">
-                <Button size="lg" color="primary" className="bg-emerald-600 hover:bg-emerald-700">
+                <Button size="lg" color="primary" className="px-5 py-2.5 text-sm font-medium bg-emerald-600 text-white rounded transition-all hover:bg-emerald-700">
                     Donate Now
                 </Button>
                 <Button color="secondary" size="lg">
@@ -202,7 +202,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                         <Button color="tertiary" size="sm">
                             Learn More
                         </Button>
-                        <Button color="primary" size="sm" className="bg-emerald-600 hover:bg-emerald-700">
+                        <Button color="primary" size="sm" className="px-5 py-2.5 text-sm font-medium bg-emerald-600 text-white rounded transition-all hover:bg-emerald-700">
                             Donate Now
                         </Button>
                     </div>
