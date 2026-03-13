@@ -222,7 +222,7 @@ const HeroSection = ({
                                         className="flex items-center gap-2 rounded-lg border border-secondary bg-primary px-2 py-2 transition duration-100 ease-linear hover:bg-primary_hover sm:gap-3 sm:px-3 sm:py-2.5"
                                     >
                                         <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-50 sm:size-10">
-                                            <span className="text-[10px] font-bold text-emerald-600 sm:text-xs">JPG</span>
+                                            <img src="/pnglogo.svg" alt="Logo" className="size-5 sm:size-6" />
                                         </div>
                                         <div className="min-w-0 flex-1">
                                             <p className="truncate text-xs font-medium text-primary sm:text-sm">Download QR Code</p>
