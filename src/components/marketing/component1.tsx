@@ -109,7 +109,7 @@ const HeroSection = ({
             <div className="mx-auto h-full max-w-7xl">
                 <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left Column - Text Content */}
-                    <div className="flex flex-col justify-center">
+                    <div className="flex flex-col justify-center pl-4 md:pl-6 lg:pl-8">
                         {/* Headline */}
                         <h1 className="font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl">
                             {headline ?? defaultHeadline}
@@ -124,16 +124,16 @@ const HeroSection = ({
                         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
                             <Button
                                 href={primaryCtaHref}
-                                size="lg"
-                                className="rounded-full bg-emerald-600 hover:bg-emerald-700 data-[loading]:bg-emerald-700"
+                                size="xl"
+                                className="rounded-lg bg-emerald-600 hover:bg-emerald-700 data-[loading]:bg-emerald-700"
                             >
                                 {primaryCtaText}
                             </Button>
                             <Button
                                 href={secondaryCtaHref}
                                 color="secondary"
-                                size="lg"
-                                className="rounded-full"
+                                size="xl"
+                                className="rounded-lg"
                             >
                                 {secondaryCtaText}
                             </Button>
