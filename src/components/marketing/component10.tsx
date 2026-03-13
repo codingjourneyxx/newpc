@@ -199,19 +199,6 @@ export const Component10 = ({ className }: Component10Props) => {
                             </div>
                         </div>
 
-                        {/* CTA - Hindi */}
-                        <div className="flex flex-col gap-3 sm:flex-row">
-                            <Button href="#donate" size="lg" className="w-full rounded-full bg-emerald-600 hover:bg-emerald-700 sm:w-auto">
-                                अभी दान करें
-                            </Button>
-                            <Button href="#share" size="lg" color="secondary" iconLeading={Share07} className="w-full rounded-full sm:w-auto">
-                                शेयर करें
-                            </Button>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <CommitteeAvatars />
-                            <span className="text-xs text-secondary">साहब गंज समिति</span>
-                        </div>
                     </div>
                 </div>
             </div>
