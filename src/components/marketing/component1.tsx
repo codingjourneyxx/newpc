@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowLeft, ChevronDown, Link01, Copy01, Download01, Trash01 } from "@untitledui/icons";
+import { ArrowRight, ArrowLeft, ChevronDown, Link01, Copy01, Download01, Trash01, ShieldTick, CheckVerified01, Receipt } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Header } from "@/app/components/header";
 import { cx } from "@/utils/cx";
@@ -137,6 +137,22 @@ const HeroSection = ({
                             >
                                 {secondaryCtaText}
                             </Button>
+                        </div>
+
+                        {/* Trust Badges */}
+                        <div className="mt-8 flex flex-wrap items-center gap-4">
+                            <div className="flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5">
+                                <ShieldTick className="size-4 text-emerald-600" />
+                                <span className="text-xs font-medium text-emerald-700">100% Secure</span>
+                            </div>
+                            <div className="flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5">
+                                <Receipt className="size-4 text-emerald-600" />
+                                <span className="text-xs font-medium text-emerald-700">Tax Deductible</span>
+                            </div>
+                            <div className="flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5">
+                                <CheckVerified01 className="size-4 text-emerald-600" />
+                                <span className="text-xs font-medium text-emerald-700">Verified Project</span>
+                            </div>
                         </div>
                     </div>
 
