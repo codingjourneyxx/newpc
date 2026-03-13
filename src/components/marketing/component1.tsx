@@ -146,10 +146,7 @@ const HeroSection = ({
                             {/* QR Code Card */}
                             <div className="rounded-2xl border border-secondary bg-primary p-6 shadow-lg">
                                 {/* Header */}
-                                <div className="flex items-center gap-3">
-                                    <button className="flex size-8 items-center justify-center rounded-lg text-tertiary transition duration-100 ease-linear hover:bg-primary_hover">
-                                        <ArrowLeft className="size-5" />
-                                    </button>
+                                <div className="flex items-center">
                                     <h3 className="flex-1 text-center text-lg font-semibold text-primary">Share via QR code</h3>
                                 </div>
 
@@ -182,37 +179,38 @@ const HeroSection = ({
 
                                 {/* Download Options */}
                                 <div className="mt-3 space-y-2">
-                                    <div className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5">
+                                    <a
+                                        href="/qr-code.jpeg"
+                                        download="masjid-madrasa-qr.jpeg"
+                                        className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5 transition duration-100 ease-linear hover:bg-primary_hover"
+                                    >
                                         <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
-                                            <span className="text-xs font-bold text-emerald-600">SVG</span>
+                                            <span className="text-xs font-bold text-emerald-600">JPG</span>
                                         </div>
                                         <div className="flex-1">
-                                            <p className="text-sm font-medium text-primary">Download as SVG</p>
-                                            <p className="text-xs text-tertiary">Scalable vector graphic</p>
-                                        </div>
-                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
-                                            <Download01 className="size-4" />
-                                        </button>
-                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
-                                            <Trash01 className="size-4" />
-                                        </button>
-                                    </div>
-
-                                    <div className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5">
-                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
-                                            <span className="text-xs font-bold text-emerald-600">PNG</span>
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-primary">Download as PNG</p>
+                                            <p className="text-sm font-medium text-primary">Download QR Code</p>
                                             <p className="text-xs text-tertiary">High quality image</p>
                                         </div>
-                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                        <div className="flex size-8 items-center justify-center rounded-md text-fg-quaternary">
                                             <Download01 className="size-4" />
-                                        </button>
-                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
-                                            <Trash01 className="size-4" />
-                                        </button>
-                                    </div>
+                                        </div>
+                                    </a>
+
+                                    <button
+                                        onClick={() => navigator.clipboard.writeText("thealhamdtechnologies-1@oksbi")}
+                                        className="flex w-full items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5 transition duration-100 ease-linear hover:bg-primary_hover"
+                                    >
+                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
+                                            <span className="text-xs font-bold text-emerald-600">UPI</span>
+                                        </div>
+                                        <div className="flex-1 text-left">
+                                            <p className="text-sm font-medium text-primary">Copy UPI ID</p>
+                                            <p className="text-xs text-tertiary">thealhamdtechnologies-1@oksbi</p>
+                                        </div>
+                                        <div className="flex size-8 items-center justify-center rounded-md text-fg-quaternary">
+                                            <Copy01 className="size-4" />
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
