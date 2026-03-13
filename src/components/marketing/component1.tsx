@@ -84,76 +84,69 @@ interface HeroSectionProps {
 
 const HeroSection = ({
     headline,
-    description = "The all-in-one AI platform for on-call, incident response, and status pages—built for fast-moving teams.",
-    primaryCtaText = "Get a demo",
-    primaryCtaHref = "#",
-    secondaryCtaText = "Start a free trial",
-    secondaryCtaHref = "#",
+    description = "An appeal is made to all Islamic brothers for a contribution of 1 rupee for the construction of this mosque and madrasa in our village. Please also seek help from your friends and relatives. May Allah reward you with goodness.",
+    primaryCtaText = "Donate Now",
+    primaryCtaHref = "#donate",
+    secondaryCtaText = "Learn More",
+    secondaryCtaHref = "#about",
     className,
 }: HeroSectionProps) => {
     const defaultHeadline = (
         <>
-            Move{" "}
-            <span className="relative inline-block">
-                <span className="relative">
-                    {/* Strikethrough lines */}
-                    <span
-                        className="pointer-events-none absolute inset-0 flex flex-col justify-center"
-                        aria-hidden="true"
-                    >
-                        {[...Array(4)].map((_, i) => (
-                            <span
-                                key={i}
-                                className="h-px w-full bg-primary"
-                                style={{
-                                    transform: `translateY(${(i - 1.5) * 6}px)`,
-                                }}
-                            />
-                        ))}
-                    </span>
-                    <span>fast</span>
-                </span>
-            </span>{" "}
-            when
+            Build Our Masjid
             <br />
-            you break things
+            & Madrasa Together
         </>
     );
 
     return (
         <section
             className={cx(
-                "flex flex-col items-center px-4 py-16 text-center md:py-24 lg:py-32",
+                "px-4 py-16 md:py-24 lg:py-32",
                 className
             )}
         >
-            {/* Headline */}
-            <h1 className="max-w-4xl font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl xl:text-7xl">
-                {headline ?? defaultHeadline}
-            </h1>
+            <div className="mx-auto max-w-7xl">
+                <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                    {/* Left Column - Text Content */}
+                    <div className="flex flex-col">
+                        {/* Headline */}
+                        <h1 className="font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl">
+                            {headline ?? defaultHeadline}
+                        </h1>
 
-            {/* Description */}
-            <p className="mt-6 max-w-2xl text-lg text-secondary md:text-xl">
-                {description}
-            </p>
+                        {/* Description */}
+                        <p className="mt-6 text-lg text-secondary md:text-xl">
+                            {description}
+                        </p>
 
-            {/* CTA Buttons */}
-            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
-                <Button
-                    href={primaryCtaHref}
-                    size="lg"
-                    className="rounded-full bg-green-light-500 hover:bg-green-light-600 data-[loading]:bg-green-light-600"
-                >
-                    {primaryCtaText}
-                </Button>
-                <Button
-                    href={secondaryCtaHref}
-                    color="secondary"
-                    size="lg"
-                    className="rounded-full"
-                >
-                    {secondaryCtaText}
-                </Button>
+                        {/* CTA Buttons */}
+                        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
+                            <Button
+                                href={primaryCtaHref}
+                                size="lg"
+                                className="rounded-full bg-emerald-600 hover:bg-emerald-700 data-[loading]:bg-emerald-700"
+                            >
+                                {primaryCtaText}
+                            </Button>
+                            <Button
+                                href={secondaryCtaHref}
+                                color="secondary"
+                                size="lg"
+                                className="rounded-full"
+                            >
+                                {secondaryCtaText}
+                            </Button>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Image */}
+                    <div className="aspect-square w-full overflow-hidden rounded-2xl bg-tertiary lg:aspect-[4/3]">
+                        <div className="flex h-full items-center justify-center text-quaternary">
+                            Masjid Image
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
@@ -169,8 +162,8 @@ interface Component1Props {
 }
 
 export const Component1 = ({
-    announcementText = "Don't just migrate. Upgrade. Live on March 17.",
-    announcementHref = "#",
+    announcementText = "Join our community appeal for Masjid & Madrasa",
+    announcementHref = "#donate",
     className,
 }: Component1Props) => {
     return (
@@ -178,16 +171,9 @@ export const Component1 = ({
             {/* Header */}
             <Header />
 
-            {/* Hero Section */}
-            <HeroSection />
-
-            {/* Full Width Big Image */}
-            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 sm:px-6 lg:px-8">
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl bg-tertiary">
-                    <div className="flex h-full items-center justify-center text-quaternary">
-                        Big Image Placeholder
-                    </div>
-                </div>
+            {/* Hero Section - 50/50 Grid */}
+            <div className="mx-auto max-w-7xl border-l border-r border-secondary">
+                <HeroSection />
             </div>
         </div>
     );
