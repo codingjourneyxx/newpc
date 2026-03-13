@@ -178,7 +178,7 @@ const HeroSection = ({
                     <div className="flex h-full w-full items-center justify-center bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-8">
                         <div className="flex w-full max-w-md flex-col gap-4">
                             {/* QR Code Card */}
-                            <div className="rounded-2xl border border-secondary bg-primary p-6 shadow-lg">
+                            <div className="rounded-xs border border-secondary bg-primary p-6 shadow-2xl">
                                 {/* Header */}
                                 <div className="flex items-center">
                                     <h3 className="flex-1 text-center text-lg font-semibold text-primary">Share via QR code</h3>
