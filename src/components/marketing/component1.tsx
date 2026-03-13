@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "@untitledui/icons";
+import { ArrowRight, ArrowLeft, ChevronDown, Link01, Copy01, Download01, Trash01 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Header } from "@/app/components/header";
 import { cx } from "@/utils/cx";
@@ -102,7 +102,7 @@ const HeroSection = ({
     return (
         <section
             className={cx(
-                "h-[800px]",
+                "h-[750px]",
                 className
             )}
         >
@@ -140,10 +140,96 @@ const HeroSection = ({
                         </div>
                     </div>
 
-                    {/* Right Column - Image (Full Height) */}
-                    <div className="aspect-square w-full overflow-hidden bg-tertiary lg:aspect-auto lg:h-full">
-                        <div className="flex h-full items-center justify-center text-quaternary">
-                            Masjid Image
+                    {/* Right Column - QR Code Share UI */}
+                    <div className="flex h-full w-full items-center justify-center bg-gray-100 p-8">
+                        <div className="flex w-full max-w-md flex-col gap-4">
+                            {/* Share Profile Button */}
+                            <div className="flex justify-end">
+                                <button className="flex items-center gap-2 rounded-full border border-secondary bg-primary px-4 py-2 text-sm font-medium text-primary shadow-sm transition duration-100 ease-linear hover:bg-primary_hover">
+                                    Share profile
+                                    <ChevronDown className="size-4 text-fg-quaternary" />
+                                </button>
+                            </div>
+
+                            {/* QR Code Card */}
+                            <div className="rounded-2xl border border-secondary bg-primary p-6 shadow-lg">
+                                {/* Header */}
+                                <div className="flex items-center gap-3">
+                                    <button className="flex size-8 items-center justify-center rounded-lg text-tertiary transition duration-100 ease-linear hover:bg-primary_hover">
+                                        <ArrowLeft className="size-5" />
+                                    </button>
+                                    <h3 className="flex-1 text-center text-lg font-semibold text-primary">Share via QR code</h3>
+                                </div>
+
+                                {/* Description */}
+                                <p className="mt-2 text-center text-sm text-tertiary">
+                                    Scan this QR code to donate directly to our Masjid & Madrasa project.
+                                </p>
+
+                                {/* QR Code Container */}
+                                <div className="mt-6 flex justify-center">
+                                    <div className="rounded-xl border-2 border-dashed border-gray-200 p-4">
+                                        <div className="rounded-lg border-2 border-emerald-600 p-2">
+                                            {/* QR Code Placeholder */}
+                                            <div className="grid size-40 grid-cols-7 gap-1">
+                                                {[...Array(49)].map((_, i) => (
+                                                    <div
+                                                        key={i}
+                                                        className={cx(
+                                                            "aspect-square rounded-sm",
+                                                            Math.random() > 0.5 ? "bg-gray-900" : "bg-transparent"
+                                                        )}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Link Input */}
+                                <div className="mt-6 flex items-center gap-2 rounded-lg border border-secondary bg-primary px-3 py-2.5">
+                                    <Link01 className="size-5 text-fg-quaternary" />
+                                    <span className="flex-1 text-sm text-secondary">donate.masjid-madrasa.org</span>
+                                    <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                        <Copy01 className="size-4" />
+                                    </button>
+                                </div>
+
+                                {/* Download Options */}
+                                <div className="mt-3 space-y-2">
+                                    <div className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5">
+                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
+                                            <span className="text-xs font-bold text-emerald-600">SVG</span>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-medium text-primary">Download as SVG</p>
+                                            <p className="text-xs text-tertiary">Scalable vector graphic</p>
+                                        </div>
+                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                            <Download01 className="size-4" />
+                                        </button>
+                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                            <Trash01 className="size-4" />
+                                        </button>
+                                    </div>
+
+                                    <div className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5">
+                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
+                                            <span className="text-xs font-bold text-emerald-600">PNG</span>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-medium text-primary">Download as PNG</p>
+                                            <p className="text-xs text-tertiary">High quality image</p>
+                                        </div>
+                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                            <Download01 className="size-4" />
+                                        </button>
+                                        <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
+                                            <Trash01 className="size-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
