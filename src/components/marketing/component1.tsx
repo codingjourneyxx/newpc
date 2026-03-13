@@ -160,20 +160,13 @@ const HeroSection = ({
 
                                 {/* QR Code Container */}
                                 <div className="mt-6 flex justify-center">
-                                    <div className="rounded-xl border-2 border-dashed border-gray-200 p-4">
+                                    <div className="rounded-xl border-2 border-dashed border-gray-200 ">
                                         <div className="rounded-lg border-2 border-emerald-600 p-2">
-                                            {/* QR Code Placeholder */}
-                                            <div className="grid size-40 grid-cols-7 gap-1">
-                                                {[...Array(49)].map((_, i) => (
-                                                    <div
-                                                        key={i}
-                                                        className={cx(
-                                                            "aspect-square rounded-sm",
-                                                            Math.random() > 0.5 ? "bg-gray-900" : "bg-transparent"
-                                                        )}
-                                                    />
-                                                ))}
-                                            </div>
+                                            <img
+                                                src="/qr-code.jpeg"
+                                                alt="Scan to donate via UPI"
+                                                className="size-60 object-contain"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +174,7 @@ const HeroSection = ({
                                 {/* Link Input */}
                                 <div className="mt-6 flex items-center gap-2 rounded-lg border border-secondary bg-primary px-3 py-2.5">
                                     <Link01 className="size-5 text-fg-quaternary" />
-                                    <span className="flex-1 text-sm text-secondary">donate.masjid-madrasa.org</span>
+                                    <span className="flex-1 text-sm text-secondary">thealhamdtechnologies-1@oksbi</span>
                                     <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
                                         <Copy01 className="size-4" />
                                     </button>
