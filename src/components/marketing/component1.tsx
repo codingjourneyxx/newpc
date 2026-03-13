@@ -176,7 +176,7 @@ const HeroSection = ({
 
                     {/* Right Column - QR Code Share UI */}
                     <div
-                        className="flex min-h-[400px] w-full items-center justify-center bg-cover bg-center bg-no-repeat p-4 sm:p-6 md:p-8 lg:h-full lg:min-h-0"
+                        className="flex min-h-[400px] w-full items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-12 sm:p-6 md:p-8 lg:h-full lg:min-h-0 lg:py-8"
                         style={{ backgroundImage: "url('/rightcolbg.jpg')" }}
                     >
                         <div className="flex w-full max-w-sm flex-col gap-4 sm:max-w-md">
