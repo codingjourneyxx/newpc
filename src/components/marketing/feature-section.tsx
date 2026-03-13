@@ -72,15 +72,15 @@ export const FeatureSection = ({
 }: FeatureSectionProps) => {
     return (
         <section className={cx("w-full", className)}>
-            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+            <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
                 {/* Header */}
-                <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+                <div className="flex flex-col gap-4 sm:gap-8 lg:flex-row lg:items-start lg:justify-between">
                     {/* Left - Title & Description */}
                     <div className="max-w-2xl">
-                        <h2 className="font-serif text-3xl font-normal tracking-tight text-primary md:text-4xl">
+                        <h2 className="font-serif text-2xl font-normal tracking-tight text-primary sm:text-3xl md:text-4xl">
                             {title}
                         </h2>
-                        <p className="mt-4 text-lg text-secondary">
+                        <p className="mt-3 text-base text-secondary sm:mt-4 sm:text-lg">
                             {description}
                         </p>
                         <Button
@@ -104,11 +104,11 @@ export const FeatureSection = ({
                 </div>
 
                 {/* Content Area - 2/3 + 1/3 layout */}
-                <div className="mt-10 flex gap-4 md:gap-6">
+                <div className="mt-6 flex flex-col gap-4 sm:mt-10 md:gap-6 lg:flex-row">
                     {/* Left - Image Carousel Area (2/3) */}
                     <div className="flex w-full flex-col gap-4 md:gap-6 lg:max-w-[66%]">
                         {/* Image Placeholder - Carousel would go here */}
-                        <div className="aspect-[350/300] w-full overflow-hidden rounded-2xl bg-tertiary">
+                        <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-tertiary sm:aspect-[350/300] sm:rounded-2xl">
                             {image ? (
                                 <img src={image} alt="" className="h-full w-full object-cover" />
                             ) : (

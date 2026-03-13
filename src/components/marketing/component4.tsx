@@ -12,12 +12,12 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-    <div className="flex flex-col rounded-2xl border border-secondary bg-primary p-6 transition duration-100 ease-linear hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-md">
-        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-100">
-            <Icon className="size-5 text-emerald-600" />
+    <div className="flex flex-col rounded-2xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-md sm:p-6">
+        <div className="flex size-9 items-center justify-center rounded-lg bg-emerald-100 sm:size-10">
+            <Icon className="size-4 text-emerald-600 sm:size-5" />
         </div>
-        <h3 className="mt-16 text-lg font-semibold text-primary">{title}</h3>
-        <p className="mt-1 text-sm text-tertiary">{description}</p>
+        <h3 className="mt-8 text-base font-semibold text-primary sm:mt-16 sm:text-lg">{title}</h3>
+        <p className="mt-1 text-xs text-tertiary sm:text-sm">{description}</p>
     </div>
 );
 
@@ -31,7 +31,7 @@ interface TabButtonProps {
 const TabButton = ({ icon: Icon, label, isActive, isHighlighted }: TabButtonProps) => (
     <button
         className={cx(
-            "flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium transition duration-100 ease-linear",
+            "flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium transition duration-100 ease-linear sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm",
             isHighlighted
                 ? "bg-emerald-600 text-white shadow-lg"
                 : isActive
@@ -39,7 +39,7 @@ const TabButton = ({ icon: Icon, label, isActive, isHighlighted }: TabButtonProp
                     : "bg-secondary text-secondary hover:bg-tertiary"
         )}
     >
-        <Icon className="size-4" />
+        <Icon className="size-3.5 sm:size-4" />
         <span>{label}</span>
     </button>
 );
@@ -84,40 +84,40 @@ export const Component4 = ({ className }: Component4Props) => {
         <section className={cx("w-full", className)}>
             <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
                 {/* Floating Icons */}
-                <div className="relative mx-auto mb-8 flex h-24 w-64 items-center justify-center">
-                    <div className="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-emerald-100 shadow-sm">
-                        <BookOpen01 className="size-5 text-emerald-500" />
+                <div className="relative mx-auto mb-6 flex h-20 w-48 items-center justify-center sm:mb-8 sm:h-24 sm:w-64">
+                    <div className="absolute left-0 top-0 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:size-10">
+                        <BookOpen01 className="size-4 text-emerald-500 sm:size-5" />
                     </div>
-                    <div className="absolute left-12 top-4 flex size-10 items-center justify-center rounded-lg bg-emerald-100 shadow-sm">
-                        <Heart className="size-5 text-emerald-500" />
+                    <div className="absolute left-8 top-3 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:left-12 sm:top-4 sm:size-10">
+                        <Heart className="size-4 text-emerald-500 sm:size-5" />
                     </div>
-                    <div className="absolute right-12 top-4 flex size-10 items-center justify-center rounded-lg bg-emerald-100 shadow-sm">
-                        <Users01 className="size-5 text-emerald-500" />
+                    <div className="absolute right-8 top-3 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:right-12 sm:top-4 sm:size-10">
+                        <Users01 className="size-4 text-emerald-500 sm:size-5" />
                     </div>
-                    <div className="absolute right-0 top-0 flex size-10 items-center justify-center rounded-lg bg-emerald-100 shadow-sm">
-                        <Star01 className="size-5 text-emerald-500" />
+                    <div className="absolute right-0 top-0 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:size-10">
+                        <Star01 className="size-4 text-emerald-500 sm:size-5" />
                     </div>
-                    <div className="absolute bottom-0 left-1/2 flex size-12 -translate-x-1/2 items-center justify-center rounded-xl bg-emerald-600 shadow-lg">
-                        <Home02 className="size-6 text-white" />
+                    <div className="absolute bottom-0 left-1/2 flex size-10 -translate-x-1/2 items-center justify-center rounded-xl bg-emerald-600 shadow-lg sm:size-12">
+                        <Home02 className="size-5 text-white sm:size-6" />
                     </div>
                 </div>
 
                 {/* Headline */}
-                <h2 className="text-center font-serif text-3xl font-normal italic tracking-tight text-primary md:text-4xl lg:text-5xl">
+                <h2 className="text-center font-serif text-2xl font-normal italic tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
                     Building a <span className="not-italic text-emerald-600">center of faith</span>
                     <br />
                     <span className="not-italic">and learning</span> for our village
                 </h2>
 
                 {/* Description */}
-                <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-secondary">
+                <p className="mx-auto mt-4 max-w-2xl text-center text-base text-secondary sm:mt-6 sm:text-lg">
                     Our Masjid and Madrasa will serve as a spiritual hub for
                     prayers, education, and community welfare activities
                     for generations to come.
                 </p>
 
                 {/* Feature Cards */}
-                <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-8 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
                     {features.map((feature, index) => (
                         <FeatureCard
                             key={index}
@@ -129,7 +129,7 @@ export const Component4 = ({ className }: Component4Props) => {
                 </div>
 
                 {/* Bottom Tabs */}
-                <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-3">
                     {tabs.map((tab, index) => (
                         <TabButton
                             key={index}

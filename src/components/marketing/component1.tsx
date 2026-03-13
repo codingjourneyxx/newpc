@@ -102,14 +102,14 @@ const HeroSection = ({
     return (
         <section
             className={cx(
-                "h-[750px]",
+                "min-h-screen lg:min-h-0 lg:h-[750px]",
                 className
             )}
         >
             <div className="mx-auto h-full max-w-7xl">
-                <div className="grid h-full grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-0">
+                <div className="grid h-full grid-cols-1 items-stretch lg:grid-cols-2">
                     {/* Left Column - Text Content */}
-                    <div className="relative flex flex-col justify-center pt-16 md:pt-20 lg:pt-24 px-4 md:pl-6 lg:px-8">
+                    <div className="relative flex flex-col justify-center px-4 py-12 pt-20 sm:px-6 md:py-16 md:pt-24 lg:py-0 lg:pt-24 lg:px-8">
                         {/* Dot Pattern Background */}
                         <div
                             className="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -119,7 +119,7 @@ const HeroSection = ({
                             }}
                         />
                         {/* Headline */}
-                        <h1 className="font-serif text-4xl font-normal italic tracking-tight text-primary md:text-5xl lg:text-6xl">
+                        <h1 className="font-serif text-3xl font-normal italic tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-6xl">
                             {headline ?? defaultHeadline}
                         </h1>
 
@@ -176,76 +176,76 @@ const HeroSection = ({
 
                     {/* Right Column - QR Code Share UI */}
                     <div
-                        className="flex h-full w-full items-center justify-center p-8 bg-cover bg-center bg-no-repeat"
+                        className="flex min-h-[400px] w-full items-center justify-center bg-cover bg-center bg-no-repeat p-4 sm:p-6 md:p-8 lg:h-full lg:min-h-0"
                         style={{ backgroundImage: "url('/rightcolbg.jpg')" }}
                     >
-                        <div className="flex w-full max-w-md flex-col gap-4">
+                        <div className="flex w-full max-w-sm flex-col gap-4 sm:max-w-md">
                             {/* QR Code Card */}
-                            <div className="rounded-xs border border-secondary bg-primary p-6 shadow-2xl">
+                            <div className="rounded-xs border border-secondary bg-primary p-4 shadow-2xl sm:p-6">
                                 {/* Header */}
                                 <div className="flex items-center">
-                                    <h3 className="flex-1 text-center text-lg font-semibold text-primary">Share via QR code</h3>
+                                    <h3 className="flex-1 text-center text-base font-semibold text-primary sm:text-lg">Share via QR code</h3>
                                 </div>
 
                                 {/* Description */}
-                                <p className="mt-2 text-center text-sm text-tertiary">
+                                <p className="mt-2 text-center text-xs text-tertiary sm:text-sm">
                                     Scan this QR code to donate directly to our Masjid & Madrasa project.
                                 </p>
 
                                 {/* QR Code Container */}
-                                <div className="mt-6 flex justify-center">
-                                    <div className="rounded-xl border-2 border-dashed border-gray-200 ">
-                                        <div className="rounded-lg border-2 border-emerald-600 p-2">
+                                <div className="mt-4 flex justify-center sm:mt-6">
+                                    <div className="rounded-xl border-2 border-dashed border-gray-200">
+                                        <div className="rounded-lg border-2 border-emerald-600 p-1.5 sm:p-2">
                                             <img
                                                 src="/qr-code.jpeg"
                                                 alt="Scan to donate via UPI"
-                                                className="size-60 object-contain"
+                                                className="size-40 object-contain sm:size-48 md:size-60"
                                             />
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Link Input */}
-                                <div className="mt-6 flex items-center gap-2 rounded-lg border border-secondary bg-primary px-3 py-2.5">
-                                    <Link01 className="size-5 text-fg-quaternary" />
-                                    <span className="flex-1 text-sm text-secondary">thealhamdtechnologies-1@oksbi</span>
-                                    <button className="flex size-8 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary">
-                                        <Copy01 className="size-4" />
+                                <div className="mt-4 flex items-center gap-2 rounded-lg border border-secondary bg-primary px-2 py-2 sm:mt-6 sm:px-3 sm:py-2.5">
+                                    <Link01 className="size-4 flex-shrink-0 text-fg-quaternary sm:size-5" />
+                                    <span className="flex-1 truncate text-xs text-secondary sm:text-sm">thealhamdtechnologies-1@oksbi</span>
+                                    <button className="flex size-7 flex-shrink-0 items-center justify-center rounded-md text-fg-quaternary transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-secondary sm:size-8">
+                                        <Copy01 className="size-3.5 sm:size-4" />
                                     </button>
                                 </div>
 
                                 {/* Download Options */}
-                                <div className="mt-3 space-y-2">
+                                <div className="mt-2 space-y-2 sm:mt-3">
                                     <a
                                         href="/qr-code.jpeg"
                                         download="masjid-madrasa-qr.jpeg"
-                                        className="flex items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5 transition duration-100 ease-linear hover:bg-primary_hover"
+                                        className="flex items-center gap-2 rounded-lg border border-secondary bg-primary px-2 py-2 transition duration-100 ease-linear hover:bg-primary_hover sm:gap-3 sm:px-3 sm:py-2.5"
                                     >
-                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
-                                            <span className="text-xs font-bold text-emerald-600">JPG</span>
+                                        <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-50 sm:size-10">
+                                            <span className="text-[10px] font-bold text-emerald-600 sm:text-xs">JPG</span>
                                         </div>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-primary">Download QR Code</p>
-                                            <p className="text-xs text-tertiary">High quality image</p>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="truncate text-xs font-medium text-primary sm:text-sm">Download QR Code</p>
+                                            <p className="truncate text-[10px] text-tertiary sm:text-xs">High quality image</p>
                                         </div>
-                                        <div className="flex size-8 items-center justify-center rounded-md text-fg-quaternary">
-                                            <Download01 className="size-4" />
+                                        <div className="flex size-7 flex-shrink-0 items-center justify-center rounded-md text-fg-quaternary sm:size-8">
+                                            <Download01 className="size-3.5 sm:size-4" />
                                         </div>
                                     </a>
 
                                     <button
                                         onClick={() => navigator.clipboard.writeText("thealhamdtechnologies-1@oksbi")}
-                                        className="flex w-full items-center gap-3 rounded-lg border border-secondary bg-primary px-3 py-2.5 transition duration-100 ease-linear hover:bg-primary_hover"
+                                        className="flex w-full items-center gap-2 rounded-lg border border-secondary bg-primary px-2 py-2 transition duration-100 ease-linear hover:bg-primary_hover sm:gap-3 sm:px-3 sm:py-2.5"
                                     >
-                                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
-                                            <span className="text-xs font-bold text-emerald-600">UPI</span>
+                                        <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-50 sm:size-10">
+                                            <span className="text-[10px] font-bold text-emerald-600 sm:text-xs">UPI</span>
                                         </div>
-                                        <div className="flex-1 text-left">
-                                            <p className="text-sm font-medium text-primary">Copy UPI ID</p>
-                                            <p className="text-xs text-tertiary">thealhamdtechnologies-1@oksbi</p>
+                                        <div className="min-w-0 flex-1 text-left">
+                                            <p className="truncate text-xs font-medium text-primary sm:text-sm">Copy UPI ID</p>
+                                            <p className="truncate text-[10px] text-tertiary sm:text-xs">thealhamdtechnologies-1@oksbi</p>
                                         </div>
-                                        <div className="flex size-8 items-center justify-center rounded-md text-fg-quaternary">
-                                            <Copy01 className="size-4" />
+                                        <div className="flex size-7 flex-shrink-0 items-center justify-center rounded-md text-fg-quaternary sm:size-8">
+                                            <Copy01 className="size-3.5 sm:size-4" />
                                         </div>
                                     </button>
                                 </div>
