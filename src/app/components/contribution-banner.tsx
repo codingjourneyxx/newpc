@@ -25,7 +25,7 @@ const FeatureCard = ({ icon: Icon, title, description }: { icon: FC<{ className?
 );
 
 export const ContributionBanner = ({ className }: { className?: string }) => (
-    <div className={cx("w-full relative overflow-hidden h-[600px] sm:h-[800px]", className)}>
+    <div className={cx("w-full relative overflow-hidden h-[900px] sm:h-[800px]", className)}>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/rightcolbg.jpg')" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/50 via-emerald-900/30 to-emerald-900/70" />
         <div className="absolute left-10 top-20 hidden size-72 rounded-full bg-emerald-500/10 blur-3xl lg:block" />
