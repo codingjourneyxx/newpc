@@ -8,17 +8,17 @@ const links = {
     project: {
         title: "Project",
         items: [
-            { label: "Overview", href: "#project" },
-            { label: "Masjid", href: "#masjid" },
-            { label: "Madrasa", href: "#madrasa" },
-            { label: "Progress", href: "#progress" },
+            { label: "Overview", href: "/#project" },
+            { label: "Masjid", href: "/#masjid" },
+            { label: "Madrasa", href: "/#madrasa" },
+            { label: "Progress", href: "/#progress" },
         ],
     },
     explore: {
         title: "Explore",
         items: [
-            { label: "Our Mission", href: "#mission" },
-            { label: "Testimonials", href: "#testimonials" },
+            { label: "Our Mission", href: "/#mission" },
+            { label: "Testimonials", href: "/#testimonials" },
             { label: "Privacy Policy", href: "/privacy" },
             { label: "Terms of Service", href: "/terms" },
         ],

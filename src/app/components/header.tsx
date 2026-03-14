@@ -38,10 +38,10 @@ const CloseIcon = () => (
 
 // Navigation Links
 const navLinks = [
-    { label: "Project", href: "#project" },
-    { label: "Mission", href: "#mission" },
-    { label: "Progress", href: "#progress" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Project", href: "/#project" },
+    { label: "Mission", href: "/#mission" },
+    { label: "Progress", href: "/#progress" },
+    { label: "Testimonials", href: "/#testimonials" },
     { label: "Contact", href: "/contact" },
 ] as const;
 
