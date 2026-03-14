@@ -1,5 +1,4 @@
 import { Component1 } from "@/components/marketing/component1";
-import { Component2 } from "@/components/marketing/component2";
 import { Component3 } from "@/components/marketing/component3";
 import { Component4 } from "@/components/marketing/component4";
 import { Component5 } from "@/components/marketing/component5";
@@ -12,9 +11,6 @@ export default function CompShowPage() {
         <div className="min-h-screen bg-primary">
             {/* Component 1: Hero Section - Masjid & Madrasa Appeal */}
             <Component1 />
-
-            {/* Component 2: Donation Progress & Stats */}
-            <Component2 />
 
             {/* Component 3: Community Messages & Duas */}
             <Component3 />
