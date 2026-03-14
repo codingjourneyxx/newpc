@@ -324,6 +324,13 @@ export const Header = () => {
                                 >
                                     Donate
                                 </Link>
+                                <Link
+                                    href="/contact"
+                                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-emerald-600"
+                                    onMouseEnter={() => setActiveMenu(null)}
+                                >
+                                    Contact
+                                </Link>
                             </div>
                         </div>
 
@@ -389,6 +396,13 @@ export const Header = () => {
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         Donate
+                                    </Link>
+                                    <Link
+                                        href="/contact"
+                                        className="block px-4 py-3 text-base font-medium text-primary rounded-lg transition-colors hover:bg-secondary"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        Contact
                                     </Link>
                                     <div className="pt-4 space-y-3">
                                         <button
