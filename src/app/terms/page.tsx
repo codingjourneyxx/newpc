@@ -95,12 +95,9 @@ export default function TermsPage() {
             <section className="py-12 md:py-16">
                 <div className="mx-auto max-w-7xl px-4 md:px-8">
                     <div className="space-y-10">
-                        {sections.map(({ title, content }, index) => (
+                        {sections.map(({ title, content }) => (
                             <div key={title} className="border-b border-secondary pb-10 last:border-0">
-                                <h2 className="flex items-center gap-3 text-xl font-semibold text-primary">
-                                    <span className="flex size-8 items-center justify-center rounded-full bg-emerald-50 text-sm font-medium text-emerald-600">
-                                        {index + 1}
-                                    </span>
+                                <h2 className="text-xl font-semibold text-primary">
                                     {title}
                                 </h2>
                                 <div className="mt-4 whitespace-pre-line text-secondary">
