@@ -83,25 +83,6 @@ export const Component4 = ({ className }: Component4Props) => {
     return (
         <section className={cx("w-full", className)}>
             <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-                {/* Floating Icons */}
-                <div className="relative mx-auto mb-6 flex h-20 w-48 items-center justify-center sm:mb-8 sm:h-24 sm:w-64">
-                    <div className="absolute left-0 top-0 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:size-10">
-                        <BookOpen01 className="size-4 text-emerald-500 sm:size-5" />
-                    </div>
-                    <div className="absolute left-8 top-3 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:left-12 sm:top-4 sm:size-10">
-                        <Heart className="size-4 text-emerald-500 sm:size-5" />
-                    </div>
-                    <div className="absolute right-8 top-3 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:right-12 sm:top-4 sm:size-10">
-                        <Users01 className="size-4 text-emerald-500 sm:size-5" />
-                    </div>
-                    <div className="absolute right-0 top-0 flex size-8 items-center justify-center rounded-lg bg-emerald-100 shadow-sm sm:size-10">
-                        <Star01 className="size-4 text-emerald-500 sm:size-5" />
-                    </div>
-                    <div className="absolute bottom-0 left-1/2 flex size-10 -translate-x-1/2 items-center justify-center rounded-xl bg-emerald-600 shadow-lg sm:size-12">
-                        <Home02 className="size-5 text-white sm:size-6" />
-                    </div>
-                </div>
-
                 {/* Headline */}
                 <h2 className="text-center font-serif text-2xl font-normal italic tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
                     Building a <span className="not-italic text-emerald-600">center of faith</span>
