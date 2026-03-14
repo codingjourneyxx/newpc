@@ -200,15 +200,38 @@ export const CaseStudyCards = ({
         setIsDragging(false);
     }, []);
 
-    // Navigation button handlers
+    // Navigation button handlers - scroll by card width + gap
     const scrollPrev = useCallback(() => {
         if (!carouselRef.current) return;
-        carouselRef.current.scrollBy({ left: -400, behavior: "smooth" });
+        const container = carouselRef.current;
+        const cards = container.querySelectorAll('[role="group"]');
+        if (cards.length === 0) return;
+
+        const cardWidth = (cards[0] as HTMLElement).offsetWidth;
+        const gap = window.innerWidth >= 768 ? 32 : 24;
+        const scrollAmount = cardWidth + gap;
+
+        container.scrollTo({
+            left: Math.max(0, container.scrollLeft - scrollAmount),
+            behavior: "smooth"
+        });
     }, []);
 
     const scrollNext = useCallback(() => {
         if (!carouselRef.current) return;
-        carouselRef.current.scrollBy({ left: 400, behavior: "smooth" });
+        const container = carouselRef.current;
+        const cards = container.querySelectorAll('[role="group"]');
+        if (cards.length === 0) return;
+
+        const cardWidth = (cards[0] as HTMLElement).offsetWidth;
+        const gap = window.innerWidth >= 768 ? 32 : 24;
+        const scrollAmount = cardWidth + gap;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+
+        container.scrollTo({
+            left: Math.min(maxScroll, container.scrollLeft + scrollAmount),
+            behavior: "smooth"
+        });
     }, []);
 
     return (
@@ -309,20 +332,20 @@ export const CaseStudyCards = ({
                         </div>
 
                         {/* Navigation Buttons */}
-                        <div className="mt-8 flex gap-4 md:gap-8">
+                        <div className="mt-8 flex items-center gap-3">
                             <button
                                 onClick={scrollPrev}
                                 aria-label="Previous slide"
-                                className="group flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary ring-1 ring-secondary backdrop-blur transition duration-100 ease-linear ring-inset hover:bg-secondary md:size-14"
+                                className="group flex size-11 cursor-pointer items-center justify-center rounded-full bg-emerald-50 border border-emerald-200 transition duration-200 ease-out hover:bg-emerald-100 hover:border-emerald-300 active:scale-95 md:size-12"
                             >
-                                <ArrowLeftIcon className="size-5 text-fg-quaternary transition duration-100 ease-linear group-hover:text-fg-quaternary_hover md:size-6" />
+                                <ArrowLeftIcon className="size-5 text-emerald-600 transition duration-200 ease-out group-hover:text-emerald-700" />
                             </button>
                             <button
                                 onClick={scrollNext}
                                 aria-label="Next slide"
-                                className="group flex size-12 cursor-pointer items-center justify-center rounded-full bg-primary ring-1 ring-secondary backdrop-blur transition duration-100 ease-linear ring-inset hover:bg-secondary md:size-14"
+                                className="group flex size-11 cursor-pointer items-center justify-center rounded-full bg-emerald-600 border border-emerald-600 transition duration-200 ease-out hover:bg-emerald-700 hover:border-emerald-700 active:scale-95 md:size-12"
                             >
-                                <ArrowRightIcon className="size-5 text-fg-quaternary transition duration-100 ease-linear group-hover:text-fg-quaternary_hover md:size-6" />
+                                <ArrowRightIcon className="size-5 text-white transition duration-200 ease-out" />
                             </button>
                         </div>
                     </div>
