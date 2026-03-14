@@ -11,6 +11,7 @@ type CaseStudy = {
     quote: string;
     href: string;
     bgColor: string;
+    bgImage?: string;
     avatar?: string;
     author?: string;
     role?: string;
@@ -24,6 +25,7 @@ const defaultCaseStudies: CaseStudy[] = [
         quote: "Contributing to this masjid project has been a blessing. Every brick laid is a step towards Jannah.",
         href: "#",
         bgColor: "bg-emerald-600",
+        bgImage: "https://images.unsplash.com/photo-1585129777188-94600bc7b4b3?w=800&q=80",
         avatar: "https://www.untitledui.com/images/avatars/olivia-rhye",
         author: "Ahmed Khan",
         role: "Community Member",
@@ -35,6 +37,7 @@ const defaultCaseStudies: CaseStudy[] = [
         quote: "A place of worship for our village was long needed. Alhamdulillah, this dream is becoming reality.",
         href: "#",
         bgColor: "bg-teal-600",
+        bgImage: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=800&q=80",
         avatar: "https://www.untitledui.com/images/avatars/lana-steiner",
         author: "Mohammad Iqbal",
         role: "Village Elder",
@@ -46,6 +49,7 @@ const defaultCaseStudies: CaseStudy[] = [
         quote: "Even a small donation counts. Together we are building something that will benefit our community.",
         href: "#",
         bgColor: "bg-emerald-800",
+        bgImage: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&q=80",
         avatar: "https://www.untitledui.com/images/avatars/demi-wilkinson",
         author: "Zainab Khatoon",
         role: "Local Supporter",
@@ -281,20 +285,32 @@ export const CaseStudyCards = ({
                                         role="group"
                                         aria-roledescription="slide"
                                         className={cx(
-                                            "min-w-0 grow-0 basis-full relative flex h-118 max-w-76 shrink-0 cursor-grab items-end p-6 md:h-126 md:w-full md:max-w-sm md:p-5",
+                                            "min-w-0 grow-0 basis-full relative flex h-118 max-w-76 shrink-0 cursor-grab items-end p-6 md:h-126 md:w-full md:max-w-sm md:p-5 overflow-hidden",
                                             caseStudy.bgColor,
                                             isDragging && "cursor-grabbing"
                                         )}
                                     >
+                                        {/* Background Image */}
+                                        {caseStudy.bgImage && (
+                                            <img
+                                                src={caseStudy.bgImage}
+                                                alt=""
+                                                className="absolute inset-0 h-full w-full object-cover"
+                                                draggable={false}
+                                            />
+                                        )}
+                                        {/* Gradient Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
                                         {caseStudy.logo && (
                                             <img
                                                 src={caseStudy.logo}
                                                 alt={caseStudy.name}
-                                                className="absolute top-6 left-6 h-10 object-contain md:top-8 md:left-8 md:h-12"
+                                                className="absolute top-6 left-6 h-10 object-contain md:top-8 md:left-8 md:h-12 z-10"
                                                 draggable={false}
                                             />
                                         )}
-                                        <div className="flex cursor-auto flex-col bg-white/30 px-4 py-5 ring-1 ring-white/30 backdrop-blur-md ring-inset md:p-5 md:px-6 md:py-8">
+                                        <div className="relative z-10 flex cursor-auto flex-col bg-white/20 px-4 py-5 ring-1 ring-white/20 backdrop-blur-md ring-inset md:p-5 md:px-6 md:py-8">
                                             {/* Avatar and Author */}
                                             {caseStudy.avatar && (
                                                 <div className="flex items-center gap-3 mb-4">
