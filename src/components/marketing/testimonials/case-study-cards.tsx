@@ -18,48 +18,48 @@ type CaseStudy = {
 
 const defaultCaseStudies: CaseStudy[] = [
     {
-        id: "layers",
-        name: "Layers",
-        logo: "https://www.untitledui.com/logos/logotype/white/layers.svg",
-        quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects faster.",
+        id: "donor-1",
+        name: "Donor",
+        logo: "",
+        quote: "Contributing to this masjid project has been a blessing. Every brick laid is a step towards Jannah.",
         href: "#",
         bgColor: "bg-emerald-600",
         avatar: "https://www.untitledui.com/images/avatars/olivia-rhye",
-        author: "Olivia Rhye",
-        role: "Product Designer",
+        author: "Ahmed Khan",
+        role: "Community Member",
     },
     {
-        id: "sisyphus",
-        name: "Sisyphus",
-        logo: "https://www.untitledui.com/logos/logotype/white/sisyphus.svg",
-        quote: "We've been using Untitled to kick start every new project and can't work without it.",
+        id: "donor-2",
+        name: "Donor",
+        logo: "",
+        quote: "This madrasa will educate generations of children. I'm proud to be part of this noble cause.",
         href: "#",
         bgColor: "bg-emerald-700",
         avatar: "https://www.untitledui.com/images/avatars/phoenix-baker",
-        author: "Phoenix Baker",
-        role: "Engineering Lead",
+        author: "Fatima Begum",
+        role: "Teacher",
     },
     {
-        id: "capsule",
-        name: "Capsule",
-        logo: "https://www.untitledui.com/logos/logotype/white/capsule.svg",
-        quote: "Love the simplicity of the service and the prompt customer support.",
+        id: "donor-3",
+        name: "Donor",
+        logo: "",
+        quote: "A place of worship for our village was long needed. Alhamdulillah, this dream is becoming reality.",
         href: "#",
         bgColor: "bg-teal-600",
         avatar: "https://www.untitledui.com/images/avatars/lana-steiner",
-        author: "Lana Steiner",
-        role: "VP of Sales",
+        author: "Mohammad Iqbal",
+        role: "Village Elder",
     },
     {
-        id: "catalog",
-        name: "Catalog",
-        logo: "https://www.untitledui.com/logos/logotype/white/catalog.svg",
-        quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects faster.",
+        id: "donor-4",
+        name: "Donor",
+        logo: "",
+        quote: "Even a small donation counts. Together we are building something that will benefit our community.",
         href: "#",
         bgColor: "bg-emerald-800",
         avatar: "https://www.untitledui.com/images/avatars/demi-wilkinson",
-        author: "Demi Wilkinson",
-        role: "Product Manager",
+        author: "Zainab Khatoon",
+        role: "Local Supporter",
     },
 ];
 
@@ -286,12 +286,14 @@ export const CaseStudyCards = ({
                                             isDragging && "cursor-grabbing"
                                         )}
                                     >
-                                        <img
-                                            src={caseStudy.logo}
-                                            alt={caseStudy.name}
-                                            className="absolute top-6 left-6 h-10 object-contain md:top-8 md:left-8 md:h-12"
-                                            draggable={false}
-                                        />
+                                        {caseStudy.logo && (
+                                            <img
+                                                src={caseStudy.logo}
+                                                alt={caseStudy.name}
+                                                className="absolute top-6 left-6 h-10 object-contain md:top-8 md:left-8 md:h-12"
+                                                draggable={false}
+                                            />
+                                        )}
                                         <div className="flex cursor-auto flex-col bg-white/30 px-4 py-5 ring-1 ring-white/30 backdrop-blur-md ring-inset md:p-5 md:px-6 md:py-8">
                                             {/* Avatar and Author */}
                                             {caseStudy.avatar && (
