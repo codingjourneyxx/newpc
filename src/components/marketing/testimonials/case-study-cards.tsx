@@ -29,17 +29,6 @@ const defaultCaseStudies: CaseStudy[] = [
         role: "Community Member",
     },
     {
-        id: "donor-2",
-        name: "Donor",
-        logo: "",
-        quote: "This madrasa will educate generations of children. I'm proud to be part of this noble cause.",
-        href: "#",
-        bgColor: "bg-emerald-700",
-        avatar: "https://www.untitledui.com/images/avatars/phoenix-baker",
-        author: "Fatima Begum",
-        role: "Teacher",
-    },
-    {
         id: "donor-3",
         name: "Donor",
         logo: "",
@@ -317,16 +306,6 @@ export const CaseStudyCards = ({
                                             <q className="text-lg font-medium text-balance text-white">
                                                 {caseStudy.quote}
                                             </q>
-                                            <a
-                                                href={caseStudy.href}
-                                                className="group mt-6 inline-flex items-center gap-1.5 text-md font-semibold text-white transition duration-100 ease-linear hover:opacity-80"
-                                                onClick={(e) => isDragging && e.preventDefault()}
-                                            >
-                                                <span className="underline decoration-transparent underline-offset-2 transition duration-100 ease-linear group-hover:decoration-current">
-                                                    Read case study
-                                                </span>
-                                                <ArrowUpRightIcon className="size-5 text-white" />
-                                            </a>
                                         </div>
                                     </div>
                                 ))}
