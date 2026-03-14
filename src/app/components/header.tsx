@@ -115,12 +115,24 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                     </div>
 
                     {/* Right Side - Donation Options */}
-                    <div className="flex flex-col justify-center p-6 lg:p-10">
-                        <h3 className="text-xl font-semibold text-primary lg:hidden mb-6">Support this blessed project</h3>
-                        <h3 className="text-lg font-semibold text-primary hidden lg:block">Choose a donation method</h3>
-                        <p className="mt-1 text-sm text-tertiary hidden lg:block">Click to copy the details</p>
+                    <div className="flex flex-col justify-center p-6 lg:p-10 overflow-y-auto">
+                        {/* Mobile Header */}
+                        <h3 className="text-xl font-semibold text-primary lg:hidden mb-4">Support this blessed project</h3>
 
-                        <div className="mt-6 space-y-3">
+                        {/* Desktop Header */}
+                        <div className="hidden lg:block">
+                            <div className="flex items-center gap-3 mb-1">
+                                <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-50">
+                                    <CreditCard01 className="size-5 text-emerald-600" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-primary">Choose a donation method</h3>
+                                    <p className="text-sm text-tertiary">Click to copy the details</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mt-5 space-y-3">
                             {/* Bank Transfer */}
                             <button
                                 onClick={() => handleCopy(BANK_ACC, "bank")}
@@ -131,8 +143,9 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 </div>
                                 <div className="min-w-0 flex-1 text-left">
                                     <p className="text-sm font-semibold text-primary">Bank Transfer (SBI)</p>
-                                    <p className="text-sm text-tertiary">A/C: {BANK_ACC}</p>
-                                    <p className="text-xs text-tertiary">IFSC: SBIN0003320</p>
+                                    <p className="text-xs text-tertiary">Name: THE AL-HAMD TECHNOLOGIES</p>
+                                    <p className="text-sm text-emerald-600 font-medium">A/C: {BANK_ACC}</p>
+                                    <p className="text-xs text-tertiary">IFSC: SBIN0003320 • Branch: Basti</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     {copiedField === "bank" ? (
@@ -152,8 +165,9 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                     <img src="/upi-logo.png" alt="UPI" className="size-7" />
                                 </div>
                                 <div className="min-w-0 flex-1 text-left">
-                                    <p className="text-sm font-semibold text-primary">G-Pay / UPI</p>
-                                    <p className="truncate text-sm text-tertiary">{UPI_ID}</p>
+                                    <p className="text-sm font-semibold text-primary">G-Pay / PhonePe / Paytm / UPI</p>
+                                    <p className="truncate text-sm text-emerald-600 font-medium">{UPI_ID}</p>
+                                    <p className="text-xs text-tertiary">Instant transfer via any UPI app</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     {copiedField === "upi" ? (
@@ -177,14 +191,29 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 <div className="min-w-0 flex-1 text-left">
                                     <p className="text-sm font-semibold text-primary">Contact on WhatsApp</p>
                                     <p className="text-sm text-tertiary">Nibboo Hassan Khan</p>
+                                    <p className="text-xs text-tertiary">For donation receipts & queries</p>
                                 </div>
                                 <Phone className="size-5 text-tertiary" />
                             </a>
                         </div>
 
-                        <p className="mt-6 text-center text-xs text-tertiary">
-                            For any queries, call <a href="tel:+919022726250" className="font-medium text-emerald-600 hover:underline">+91 9022726250</a>
-                        </p>
+                        {/* Hadith Quote */}
+                        <div className="mt-5 rounded-xl bg-amber-50 border border-amber-200 p-4">
+                            <p className="text-xs italic text-amber-800">
+                                "The believer's shade on the Day of Resurrection will be his charity."
+                            </p>
+                            <p className="mt-1 text-[10px] font-medium text-amber-600">— Prophet Muhammad ﷺ (Al-Tirmidhi)</p>
+                        </div>
+
+                        {/* Contact Info */}
+                        <div className="mt-4 flex items-center justify-center gap-4 text-xs text-tertiary">
+                            <a href="tel:+919022726250" className="flex items-center gap-1 hover:text-emerald-600 transition-colors">
+                                <Phone className="size-3.5" />
+                                +91 9022726250
+                            </a>
+                            <span className="text-secondary">•</span>
+                            <span>Sahab Ganj, Basti, UP</span>
+                        </div>
                     </div>
                 </div>
             </div>
