@@ -83,7 +83,7 @@ export default function PrivacyPage() {
 
             {/* Content */}
             <section className="py-12 md:py-16">
-                <div className="mx-auto max-w-3xl px-4 md:px-8">
+                <div className="mx-auto max-w-7xl px-4 md:px-8">
                     <div className="space-y-10">
                         {sections.map(({ title, content }, index) => (
                             <div key={title} className="border-b border-secondary pb-10 last:border-0">
