@@ -144,7 +144,7 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 <div className="min-w-0 flex-1 text-left">
                                     <p className="text-sm font-semibold text-primary">Bank Transfer (SBI)</p>
                                     <p className="text-xs text-tertiary">Name: THE AL-HAMD TECHNOLOGIES</p>
-                                    <p className="text-sm text-emerald-600 font-medium">A/C: {BANK_ACC}</p>
+                                    <p className="text-xs text-tertiary font-medium">A/C: {BANK_ACC}</p>
                                     <p className="text-xs text-tertiary">IFSC: SBIN0003320 • Branch: Basti</p>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -166,7 +166,7 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 </div>
                                 <div className="min-w-0 flex-1 text-left">
                                     <p className="text-sm font-semibold text-primary">G-Pay / PhonePe / Paytm / UPI</p>
-                                    <p className="truncate text-sm text-emerald-600 font-medium">{UPI_ID}</p>
+                                    <p className=" text-xs text-tertiary font-medium">{UPI_ID}</p>
                                     <p className="text-xs text-tertiary">Instant transfer via any UPI app</p>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -195,14 +195,6 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 </div>
                                 <Phone className="size-5 text-tertiary" />
                             </a>
-                        </div>
-
-                        {/* Hadith Quote */}
-                        <div className="mt-5 rounded-xl bg-amber-50 border border-amber-200 p-4">
-                            <p className="text-xs italic text-amber-800">
-                                "The believer's shade on the Day of Resurrection will be his charity."
-                            </p>
-                            <p className="mt-1 text-[10px] font-medium text-amber-600">— Prophet Muhammad ﷺ (Al-Tirmidhi)</p>
                         </div>
 
                         {/* Contact Info */}
