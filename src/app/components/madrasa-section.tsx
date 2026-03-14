@@ -13,7 +13,7 @@ export const MadrasaSection = ({ className }: { className?: string }) => (
             badge: "Madrasa",
         }}
         className={className}
-        image="/comp5.jpg"
+        image="/images/islamic-studies-kids.jpg"
         testimonialImage="/rightcolbg.jpg"
     />
 );
