@@ -6,6 +6,7 @@ import { Input } from "@/components/base/input/input";
 import { TextArea } from "@/components/base/textarea/textarea";
 import { Button } from "@/components/base/buttons/button";
 import { Header } from "@/app/components/header";
+import { Footer } from "@/app/components/footer";
 
 // Hoisted static data
 const contactInfo = [
@@ -302,6 +303,9 @@ export default function ContactPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }

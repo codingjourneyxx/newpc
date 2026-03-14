@@ -6,6 +6,7 @@ import { ProjectFeatures } from "@/app/components/project-features";
 import { MasjidSection } from "@/app/components/masjid-section";
 import { MadrasaSection } from "@/app/components/madrasa-section";
 import { DonationInfo } from "@/app/components/donation-info";
+import { Footer } from "@/app/components/footer";
 import { CaseStudyCards } from "@/components/marketing/testimonials/case-study-cards";
 import { ContentDivider } from "@/components/application/content-divider/content-divider";
 
@@ -39,6 +40,9 @@ export default function HomePage() {
 
             {/* Final CTA & Donation Info */}
             <DonationInfo />
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }
