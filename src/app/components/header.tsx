@@ -280,7 +280,7 @@ export const Header = () => {
     }, []);
 
     return (
-        <header ref={headerRef} className="relative bg-white/70 backdrop-blur-md border-b border-white/20 shadow-sm">
+        <header ref={headerRef} className="relative bg-white border-b border-secondary shadow-sm">
             {/* Main Navigation */}
             <nav className="bg-transparent">
                 <div className="max-w-7xl mx-auto px-3 lg:px-4  ">
