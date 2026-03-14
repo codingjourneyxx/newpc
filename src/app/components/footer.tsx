@@ -59,7 +59,7 @@ export const Footer = () => {
                         {/* Brand */}
                         <div className="lg:col-span-4">
                             <Link href="/">
-                                <img src="/logooffical.svg" alt="Al-Hamd Masjid" className="h-10 w-auto" />
+                                <img src="/logooffical.svg" alt="Al-Hamd Masjid" className="h-16 w-auto" />
                             </Link>
                             <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-tertiary">
                                 A blessed project to build a masjid and madrasa in Sahab Ganj, Basti, UP.
