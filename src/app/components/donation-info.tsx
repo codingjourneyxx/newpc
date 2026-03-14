@@ -35,7 +35,7 @@ const underlineSvg = (
 export const DonationInfo = ({ className }: { className?: string }) => (
     <section className={cx("w-full bg-primary", className)}>
         <div className="mx-auto max-w-7xl border-l border-r border-secondary">
-            <div className="relative px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8  ">
+            <div className="relative bg-white px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
                 <div className="pointer-events-none absolute inset-0 opacity-[0.15]" style={dotPatternStyle} />
 
                 {/* Two Column Layout */}
@@ -62,12 +62,14 @@ export const DonationInfo = ({ className }: { className?: string }) => (
                         {/* Impact Stats */}
                         <div className="mt-8 grid grid-cols-3 gap-4">
                             {impactStats.map(({ icon: Icon, value, label }) => (
-                                <div key={label} className="text-center">
-                                    <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-emerald-50 mb-3">
-                                        <Icon className="size-6 text-emerald-600" />
+                                <div key={label} className="flex items-center gap-3">
+                                    <div className="flex size-10 items-center justify-center rounded-xl bg-emerald-50">
+                                        <Icon className="size-5 text-emerald-600" />
                                     </div>
-                                    <p className="text-2xl font-bold text-primary">{value}</p>
-                                    <p className="text-xs text-tertiary">{label}</p>
+                                    <div>
+                                        <p className="text-lg font-bold text-primary">{value}</p>
+                                        <p className="text-[10px] text-tertiary">{label}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
