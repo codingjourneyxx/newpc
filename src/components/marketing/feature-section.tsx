@@ -120,48 +120,6 @@ export const FeatureSection = ({
                             )}
                         </div>
 
-                        {/* Tabs */}
-                        {tabs && (
-                            <div className="hidden justify-between md:flex">
-                                <ul className="flex flex-wrap gap-2 text-sm font-medium text-tertiary md:gap-4">
-                                    {tabs.map((tab, index) => (
-                                        <li key={index}>
-                                            <button
-                                                className={cx(
-                                                    "flex items-center gap-1 transition duration-100 ease-linear",
-                                                    tab.isActive
-                                                        ? "text-emerald-600"
-                                                        : "hover:text-secondary"
-                                                )}
-                                            >
-                                                <tab.icon className="hidden size-5 md:block" />
-                                                <span>{tab.label}</span>
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {/* Pagination dots */}
-                                <div className="hidden items-center gap-1 md:flex">
-                                    {tabs.map((tab, index) => (
-                                        <button
-                                            key={index}
-                                            className="block p-1"
-                                            aria-label={`Go to slide ${index + 1}`}
-                                        >
-                                            <div
-                                                className={cx(
-                                                    "size-2 rounded-full transition-all duration-200",
-                                                    tab.isActive
-                                                        ? "w-10 bg-emerald-500"
-                                                        : "bg-gray-200 hover:bg-gray-300"
-                                                )}
-                                            />
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
                     </div>
 
                     {/* Right - Testimonial with Background Image (1/3) */}
