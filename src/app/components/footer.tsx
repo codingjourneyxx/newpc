@@ -138,10 +138,10 @@ export const Footer = () => {
                         © {currentYear} Al-Hamd Masjid wa Madrasa
                     </p>
                     <div className="flex gap-6">
-                        <Link href="#privacy" className="text-sm text-tertiary transition hover:text-primary">
+                        <Link href="/privacy" className="text-sm text-tertiary transition hover:text-primary">
                             Privacy Policy
                         </Link>
-                        <Link href="#terms" className="text-sm text-tertiary transition hover:text-primary">
+                        <Link href="/terms" className="text-sm text-tertiary transition hover:text-primary">
                             Terms
                         </Link>
                     </div>
