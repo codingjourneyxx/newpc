@@ -47,6 +47,26 @@ export const Component3 = ({ className }: Component3Props) => {
             title: "Welfare Programs",
             description: "Support for orphans, widows and families in need",
         },
+        {
+            icon: Star01,
+            title: "Quran Classes",
+            description: "Daily Quran recitation and memorization programs",
+        },
+        {
+            icon: Building07,
+            title: "Wudu Area",
+            description: "Clean ablution facilities for men and women",
+        },
+        {
+            icon: BookOpen01,
+            title: "Library",
+            description: "Islamic books and educational resources",
+        },
+        {
+            icon: Users01,
+            title: "Guest Rooms",
+            description: "Accommodation for travelers and visitors",
+        },
     ];
 
     return (
@@ -95,28 +115,6 @@ export const Component3 = ({ className }: Component3Props) => {
                         ))}
                     </div>
 
-                    {/* Bottom Stats */}
-                    <div className="mt-6 flex items-center justify-center gap-6 sm:mt-8 sm:gap-10">
-                        <div className="text-center">
-                            <p className="text-xl font-bold text-white sm:text-2xl md:text-3xl">500+</p>
-                            <p className="text-xs text-white/60 sm:text-sm">Capacity</p>
-                        </div>
-                        <div className="h-8 w-px bg-white/20 sm:h-10" />
-                        <div className="text-center">
-                            <p className="text-xl font-bold text-white sm:text-2xl md:text-3xl">4</p>
-                            <p className="text-xs text-white/60 sm:text-sm">Facilities</p>
-                        </div>
-                        <div className="h-8 w-px bg-white/20 sm:h-10" />
-                        <div className="text-center">
-                            <p className="text-xl font-bold text-white sm:text-2xl md:text-3xl">100+</p>
-                            <p className="text-xs text-white/60 sm:text-sm">Donors</p>
-                        </div>
-                        <div className="h-8 w-px bg-white/20 sm:h-10" />
-                        <div className="text-center">
-                            <p className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent sm:text-2xl md:text-3xl">∞</p>
-                            <p className="text-xs text-white/60 sm:text-sm">Rewards</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

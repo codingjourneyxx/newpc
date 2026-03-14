@@ -18,17 +18,25 @@ export default function CompShowPage() {
             {/* Component 3: Community Messages & Duas */}
             <Component3 />
 
+
+
             {/* Component 4: Project Features (Masjid, Madrasa, etc.) */}
             <Component4 />
 
+            <ContentDivider />
+
+
             {/* Component 5: Masjid Feature Section */}
             <Component5 />
+            <ContentDivider />
 
             {/* Component 6: Madrasa Feature Section */}
             <Component6 />
+            <ContentDivider />
 
             {/* Case Study Cards: Testimonials Carousel */}
             <CaseStudyCards />
+            <ContentDivider />
 
             {/* Component 10: Final CTA & Donation Info */}
             <Component10 />
