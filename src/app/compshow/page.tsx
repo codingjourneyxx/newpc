@@ -5,12 +5,15 @@ import { Component5 } from "@/components/marketing/component5";
 import { Component6 } from "@/components/marketing/component6";
 import { Component10 } from "@/components/marketing/component10";
 import { CaseStudyCards } from "@/components/marketing/testimonials/case-study-cards";
+import { ContentDivider } from "@/components/application/content-divider/content-divider";
 
 export default function CompShowPage() {
     return (
         <div className="min-h-screen bg-primary">
             {/* Component 1: Hero Section - Masjid & Madrasa Appeal */}
             <Component1 />
+
+            <ContentDivider />
 
             {/* Component 3: Community Messages & Duas */}
             <Component3 />
