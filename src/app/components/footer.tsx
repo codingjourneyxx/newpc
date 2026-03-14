@@ -52,9 +52,9 @@ export const Footer = () => {
 
     return (
         <footer className="bg-[#f9fafb]" style={dotPattern}>
-            <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 md:py-16">
+            <div className="mx-auto max-w-7xl  py-12  md:py-16">
                 {/* Main Card */}
-                <div className=" border border-secondary bg-white p-8  md:p-12">
+                <div className=" border border-secondary bg-white p-4  md:p-12">
                     <div className="grid gap-10 lg:grid-cols-12">
                         {/* Brand */}
                         <div className="lg:col-span-4">
@@ -105,7 +105,7 @@ export const Footer = () => {
                     </div>
 
                     {/* Donate CTA */}
-                    <div className="mt-10 flex flex-col items-center justify-between gap-6 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-6 sm:flex-row sm:px-8">
+                    <div className="mt-16    flex flex-col items-center justify-between gap-6 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-6 sm:flex-row sm:px-8">
                         <div>
                             <h3 className="font-serif text-xl font-normal italic text-white md:text-2xl">
                                 Ready to contribute?
