@@ -1,7 +1,14 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+
+// Share data
+const shareData = {
+    title: "Al-Hamd Masjid wa Madrasa",
+    text: "Help us build a masjid and madrasa in Sahab Ganj, Basti. Your contribution is a Sadaqah Jariyah.",
+    url: typeof window !== "undefined" ? window.location.href : "",
+};
 
 // Mosque Logo Component
 const Logo = () => (
@@ -229,9 +236,37 @@ export const Header = () => {
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [slideDirection, setSlideDirection] = useState<"left" | "right" | "none">("none");
     const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+    const [shareStatus, setShareStatus] = useState<"idle" | "copied">("idle");
     const headerRef = useRef<HTMLElement>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const prevMenuRef = useRef<string | null>(null);
+
+    // Share handler - uses Web Share API with clipboard fallback
+    const handleShare = useCallback(async () => {
+        const url = window.location.href;
+        const data = { ...shareData, url };
+
+        try {
+            if (navigator.share && navigator.canShare?.(data)) {
+                await navigator.share(data);
+            } else {
+                await navigator.clipboard.writeText(url);
+                setShareStatus("copied");
+                setTimeout(() => setShareStatus("idle"), 2000);
+            }
+        } catch (err) {
+            // User cancelled or error - try clipboard as fallback
+            if ((err as Error).name !== "AbortError") {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    setShareStatus("copied");
+                    setTimeout(() => setShareStatus("idle"), 2000);
+                } catch {
+                    // Clipboard also failed
+                }
+            }
+        }
+    }, []);
 
     const handleMenuEnter = (key: string) => {
         if (timeoutRef.current) {
@@ -313,12 +348,12 @@ export const Header = () => {
 
                         {/* Desktop CTA Buttons */}
                         <div className="hidden lg:flex items-center gap-3">
-                            <Link
-                                href="#share"
+                            <button
+                                onClick={handleShare}
                                 className="px-4 py-2.5 text-sm font-medium text-tertiary transition-all hover:text-primary"
                             >
-                                Share
-                            </Link>
+                                {shareStatus === "copied" ? "Link Copied!" : "Share"}
+                            </button>
                             <Link
                                 href="#donate"
                                 className="px-5 py-2.5 text-sm font-medium bg-emerald-600 text-white rounded transition-all hover:bg-emerald-700"
@@ -375,13 +410,15 @@ export const Header = () => {
                                         Donate
                                     </Link>
                                     <div className="pt-4 space-y-3">
-                                        <Link
-                                            href="#share"
+                                        <button
+                                            onClick={() => {
+                                                handleShare();
+                                                setMobileMenuOpen(false);
+                                            }}
                                             className="block w-full px-4 py-3 text-base font-medium text-center text-primary border border-tertiary rounded-lg"
-                                            onClick={() => setMobileMenuOpen(false)}
                                         >
-                                            Share With Others
-                                        </Link>
+                                            {shareStatus === "copied" ? "Link Copied!" : "Share With Others"}
+                                        </button>
                                         <Link
                                             href="#donate"
                                             className="block w-full px-4 py-3 text-base font-medium text-center bg-emerald-600 text-white rounded-lg"
