@@ -280,30 +280,6 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Footer CTA */}
-            <section className="border-t border-secondary bg-emerald-50 py-12">
-                <div className="mx-auto max-w-7xl px-4 text-center md:px-8">
-                    <h2 className="font-serif text-2xl font-normal italic tracking-tight text-primary md:text-3xl">
-                        Ready to contribute?
-                    </h2>
-                    <p className="mx-auto mt-3 max-w-xl text-secondary">
-                        Every contribution, big or small, brings us closer to completing this blessed project.
-                    </p>
-                    <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                        <Button
-                            href="/#donate"
-                            size="lg"
-                            className="w-full justify-center rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600 sm:w-auto"
-                        >
-                            Donate Now
-                        </Button>
-                        <Button href="/" color="secondary" size="lg" className="w-full sm:w-auto">
-                            Back to Home
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
             {/* Footer */}
             <Footer />
         </div>

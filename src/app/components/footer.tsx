@@ -78,11 +78,6 @@ export const Footer = () => {
                                 </a>
                             </div>
 
-                            {/* Status */}
-                            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-secondary bg-primary px-3 py-1.5">
-                                <span className="size-2 rounded-full bg-emerald-500" />
-                                <span className="text-sm text-secondary">Construction in progress</span>
-                            </div>
                         </div>
 
                         {/* Links */}
