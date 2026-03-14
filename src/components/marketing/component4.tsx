@@ -12,12 +12,12 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-    <div className="flex flex-col  border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-md sm:p-6">
-        <div className="flex size-9 items-center justify-center rounded-lg bg-emerald-100 sm:size-10">
-            <Icon className="size-4 text-emerald-600 sm:size-5" />
+    <div className="group flex flex-col border border-secondary bg-primary p-4 transition duration-200 ease-out hover:border-emerald-600 hover:bg-emerald-600 hover:shadow-lg sm:p-6">
+        <div className="flex size-9 items-center justify-center rounded-lg bg-emerald-100 transition duration-200 ease-out group-hover:bg-white/20 sm:size-10">
+            <Icon className="size-4 text-emerald-600 transition duration-200 ease-out group-hover:text-white sm:size-5" />
         </div>
-        <h3 className="mt-6 text-base font-semibold text-primary  sm:text-lg">{title}</h3>
-        <p className="mt-1 text-xs text-tertiary sm:text-sm">{description}</p>
+        <h3 className="mt-6 text-base font-semibold text-primary transition duration-200 ease-out group-hover:text-white sm:text-lg">{title}</h3>
+        <p className="mt-1 text-xs text-tertiary transition duration-200 ease-out group-hover:text-white/80 sm:text-sm">{description}</p>
     </div>
 );
 
