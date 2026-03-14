@@ -12,11 +12,11 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
-    <div className="flex flex-col rounded-2xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-md sm:p-6">
+    <div className="flex flex-col  border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-md sm:p-6">
         <div className="flex size-9 items-center justify-center rounded-lg bg-emerald-100 sm:size-10">
             <Icon className="size-4 text-emerald-600 sm:size-5" />
         </div>
-        <h3 className="mt-8 text-base font-semibold text-primary sm:mt-16 sm:text-lg">{title}</h3>
+        <h3 className="mt-6 text-base font-semibold text-primary  sm:text-lg">{title}</h3>
         <p className="mt-1 text-xs text-tertiary sm:text-sm">{description}</p>
     </div>
 );
