@@ -241,12 +241,10 @@ export const CaseStudyCards = ({
                                 What our{" "}
                                 <span className="relative inline-block text-emerald-600">
                                     supporters say
-                                    <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 200 6" fill="none">
-                                        <path d="M0 3C50 0.5 150 5.5 200 3" stroke="#10b981" strokeWidth="2" strokeLinecap="round" />
-                                    </svg>
+                                
                                 </span>
                             </h2>
-                            <p className="mt-6 max-w-lg text-base leading-relaxed text-secondary sm:text-lg">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg">
                                 {description}
                             </p>
                         </div>
