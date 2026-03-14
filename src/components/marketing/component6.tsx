@@ -30,6 +30,8 @@ export const Component6 = ({ className }: Component6Props) => {
             }}
             tabs={tabs}
             className={className}
+            image="/comp5.jpg"
+            testimonialImage="/rightcolbg.jpg"
         />
     );
 };
