@@ -84,10 +84,10 @@ export const Component4 = ({ className }: Component4Props) => {
         <section className={cx("w-full", className)}>
             <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
                 {/* Headline */}
-                <h2 className="text-center font-serif text-2xl font-normal italic tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
-                    Building a <span className="not-italic text-emerald-600">center of faith</span>
+                <h2 className="text-center font-serif text-2xl font-normal tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
+                    Building a <span className="text-emerald-600">center of faith</span>
                     <br />
-                    <span className="not-italic">and learning</span> for our village
+                    and learning for our village
                 </h2>
 
                 {/* Description */}
