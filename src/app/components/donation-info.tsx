@@ -5,9 +5,9 @@ import { cx } from "@/utils/cx";
 
 // Hoisted static data
 const locationInfo = [
-    { label: "Village", value: "Sahab Ganj" },
-    { label: "P.O.", value: "Walter Ganj" },
-    { label: "District", value: "Basti, Uttar Pradesh" },
+    { label: "Village", value: "Sahab Ganj", highlight: false },
+    { label: "P.O.", value: "Walter Ganj", highlight: false },
+    { label: "District", value: "Basti, Uttar Pradesh", highlight: false },
     { label: "PIN Code", value: "272182", highlight: true },
 ] as const;
 

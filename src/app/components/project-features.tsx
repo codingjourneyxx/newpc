@@ -54,7 +54,7 @@ export const ProjectFeatures = ({ className }: { className?: string }) => (
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-3">
-                {tabs.map((t, i) => <TabButton key={i} icon={t.icon} label={t.label} highlighted={t.highlighted} />)}
+                {tabs.map((t, i) => <TabButton key={i} icon={t.icon} label={t.label} highlighted={"highlighted" in t ? t.highlighted : false} />)}
             </div>
         </div>
     </section>

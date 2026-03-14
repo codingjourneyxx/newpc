@@ -86,13 +86,13 @@ export const Footer = () => {
                                 <div key={title}>
                                     <h4 className="text-sm font-semibold text-primary">{title}</h4>
                                     <ul className="mt-4 space-y-3">
-                                        {items.map(({ label, href, badge }) => (
-                                            <li key={label}>
-                                                <Link href={href} className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600">
-                                                    {label}
-                                                    {badge && (
+                                        {items.map((item) => (
+                                            <li key={item.label}>
+                                                <Link href={item.href} className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600">
+                                                    {item.label}
+                                                    {"badge" in item && (
                                                         <span className="rounded bg-emerald-50 px-1.5 py-0.5 text-xs font-medium text-emerald-600">
-                                                            {badge}
+                                                            {item.badge}
                                                         </span>
                                                     )}
                                                 </Link>
