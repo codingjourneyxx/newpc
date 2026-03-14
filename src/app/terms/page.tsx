@@ -1,7 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
+
+export const metadata: Metadata = {
+    title: "Terms of Service",
+    description: "Read the Terms of Service for Al-Hamd Masjid wa Madrasa website. Understand your rights and responsibilities when using our website or making donations.",
+    openGraph: {
+        title: "Terms of Service | Al-Hamd Masjid wa Madrasa",
+        description: "Please read these terms carefully before using our website or making any donations.",
+    },
+};
 
 const sections = [
     {

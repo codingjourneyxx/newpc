@@ -8,10 +8,10 @@ const links = {
     project: {
         title: "Project",
         items: [
+            { label: "Overview", href: "#project" },
             { label: "Masjid", href: "#masjid" },
             { label: "Madrasa", href: "#madrasa" },
-            { label: "Progress", href: "#progress", badge: "New" },
-            { label: "Gallery", href: "#gallery" },
+            { label: "Progress", href: "#progress" },
         ],
     },
     explore: {
@@ -19,25 +19,25 @@ const links = {
         items: [
             { label: "Our Mission", href: "#mission" },
             { label: "Testimonials", href: "#testimonials" },
-            { label: "Updates", href: "#updates" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Privacy Policy", href: "/privacy" },
+            { label: "Terms of Service", href: "/terms" },
         ],
     },
     support: {
         title: "Support",
         items: [
             { label: "Donate", href: "#donate" },
-            { label: "Volunteer", href: "#volunteer" },
-            { label: "Share", href: "#share" },
-            { label: "Sponsor", href: "#sponsor" },
+            { label: "Contact Us", href: "/contact" },
+            { label: "WhatsApp", href: "https://wa.me/919022726250" },
+            { label: "Call Us", href: "tel:+919022726250" },
         ],
     },
     connect: {
         title: "Connect",
         items: [
-            { label: "Contact Us", href: "/contact" },
+            { label: "Phone", href: "tel:+919022726250" },
+            { label: "Email", href: "mailto:contact@alhamdmasjid.org" },
             { label: "WhatsApp", href: "https://wa.me/919022726250" },
-            { label: "Location", href: "#location" },
         ],
     },
 } as const;

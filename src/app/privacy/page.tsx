@@ -1,7 +1,15 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description: "Learn how Al-Hamd Masjid wa Madrasa collects, uses, and protects your personal information when you donate or contact us.",
+    openGraph: {
+        title: "Privacy Policy | Al-Hamd Masjid wa Madrasa",
+        description: "Your privacy is important to us. Read our privacy policy to understand how we handle your data.",
+    },
+};
 
 const sections = [
     {

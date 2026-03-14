@@ -33,7 +33,7 @@ const underlineSvg = (
 );
 
 export const DonationInfo = ({ className }: { className?: string }) => (
-    <section className={cx("w-full bg-primary", className)}>
+    <section id="mission" className={cx("w-full bg-primary scroll-mt-20", className)}>
         <div className="mx-auto max-w-7xl border-l border-r border-secondary">
             <div className="relative bg-white px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
                 <div className="pointer-events-none absolute inset-0 opacity-[0.15]" style={dotPatternStyle} />

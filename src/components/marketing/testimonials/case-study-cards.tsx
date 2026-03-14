@@ -267,7 +267,7 @@ export const CaseStudyCards = ({
 
     return (
         <div data-drag-constraint="true">
-            <section className={cx("overflow-hidden bg-primary py-16 md:py-24", className)}>
+            <section id="testimonials" className={cx("overflow-hidden bg-primary py-16 md:py-24 scroll-mt-20", className)}>
                 {/* Header - constrained width */}
                 <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
                     <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">

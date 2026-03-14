@@ -1,6 +1,7 @@
 import { FeatureLayout } from "./feature-layout";
 
 export const MasjidSection = ({ className }: { className?: string }) => (
+    <div id="masjid" className="scroll-mt-20">
     <FeatureLayout
         badge="Masjid"
         title="A sacred space for worship and reflection"
@@ -16,6 +17,7 @@ export const MasjidSection = ({ className }: { className?: string }) => (
         image="/comp5.jpg"
         testimonialImage="/masjid-bg.jpg"
     />
+    </div>
 );
 
 export default MasjidSection;

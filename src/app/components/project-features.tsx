@@ -39,7 +39,7 @@ const TabButton = ({ icon: Icon, label, highlighted }: { icon: FC<{ className?: 
 );
 
 export const ProjectFeatures = ({ className }: { className?: string }) => (
-    <section className={cx("w-full", className)}>
+    <section id="project" className={cx("w-full scroll-mt-20", className)}>
         <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-16 sm:px-6 md:py-24 lg:px-8">
             <h2 className="text-center font-serif text-2xl font-normal tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
                 Building a <span className="text-emerald-600">center of faith</span><br />and learning for our village
