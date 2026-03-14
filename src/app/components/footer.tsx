@@ -110,25 +110,26 @@ export const Footer = () => {
                     </div>
 
                     {/* Donate CTA */}
-                    <div className="mt-10 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-[1px]">
-                        <div className="flex flex-col items-center justify-between gap-4 rounded-[11px] bg-white px-6 py-5 sm:flex-row">
-                            <div className="flex items-center gap-4">
-                                <div className="flex size-12 items-center justify-center rounded-full bg-emerald-50">
-                                    <svg className="size-6 text-emerald-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="font-medium text-primary">Support this Sadaqah Jariyah</p>
-                                    <p className="text-sm text-tertiary">Every contribution builds your Akhirah</p>
-                                </div>
-                            </div>
+                    <div className="mt-10 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-8 text-center sm:px-10 sm:py-10">
+                        <h3 className="font-serif text-2xl font-normal italic text-white md:text-3xl">
+                            Ready to contribute?
+                        </h3>
+                        <p className="mx-auto mt-3 max-w-md text-emerald-100">
+                            Every contribution, big or small, brings us closer to completing this blessed project.
+                        </p>
+                        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                             <Link
                                 href="#donate"
-                                className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:from-emerald-700 hover:to-teal-600"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-emerald-600 shadow-md transition hover:bg-emerald-50"
                             >
                                 Donate Now
-                                <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                                <ArrowRight className="size-4" />
+                            </Link>
+                            <Link
+                                href="/"
+                                className="inline-flex items-center justify-center rounded-lg bg-white/10 px-6 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm transition hover:bg-white/20"
+                            >
+                                Back to Home
                             </Link>
                         </div>
                     </div>
