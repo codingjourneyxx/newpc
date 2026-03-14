@@ -57,6 +57,7 @@ interface FeatureSectionProps {
     className?: string;
     children?: ReactNode;
     image?: string;
+    testimonialImage?: string;
 }
 
 export const FeatureSection = ({
@@ -69,6 +70,7 @@ export const FeatureSection = ({
     tabs,
     className,
     image,
+    testimonialImage,
 }: FeatureSectionProps) => {
     return (
         <section className={cx("w-full", className)}>
@@ -165,12 +167,20 @@ export const FeatureSection = ({
                     {/* Right - Testimonial with Background Image (1/3) */}
                     {testimonial && (
                         <aside className="relative hidden overflow-hidden rounded-2xl lg:block lg:w-[34%]">
-                            {/* Background Image Placeholder */}
-                            <div className="absolute inset-0 bg-tertiary">
-                                <div className="flex h-full items-center justify-center text-quaternary">
-                                    Image
+                            {/* Background Image */}
+                            {testimonialImage ? (
+                                <img
+                                    src={testimonialImage}
+                                    alt=""
+                                    className="absolute inset-0 h-full w-full object-cover"
+                                />
+                            ) : (
+                                <div className="absolute inset-0 bg-tertiary">
+                                    <div className="flex h-full items-center justify-center text-quaternary">
+                                        Image
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
                             {/* Content */}

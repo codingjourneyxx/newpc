@@ -31,6 +31,7 @@ export const Component5 = ({ className }: Component5Props) => {
             tabs={tabs}
             className={className}
             image="/comp5.jpg"
+            testimonialImage="/masjid-bg.jpg"
         />
     );
 };
