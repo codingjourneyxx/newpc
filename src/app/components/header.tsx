@@ -96,13 +96,21 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                     <div className="relative hidden lg:flex flex-col justify-center p-10 bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500">
                         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
                         <div className="relative">
+                            {/* QR Code at Top */}
+                            <div className="mb-6 flex flex-col items-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-4">
+                                <p className="text-xs font-medium text-white/80 mb-3">Scan QR Code to Pay</p>
+                                <div className="rounded-lg bg-white p-2 shadow-lg">
+                                    <img src="/qr-code.jpeg" alt="UPI QR Code" className="size-32" />
+                                </div>
+                            </div>
+
                             <h2 className="font-serif text-3xl font-normal italic text-white">
                                 Support this blessed project
                             </h2>
                             <p className="mt-4 text-emerald-100 leading-relaxed">
                                 Your donation is a Sadaqah Jariyah - an ongoing charity that will benefit you even after your lifetime. Every rupee contributes to building a house of Allah.
                             </p>
-                            <div className="mt-8 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                            <div className="mt-6 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
                                 <p className="text-sm italic text-white/90">
                                     "Whoever builds a mosque for Allah, Allah will build for him a house in Paradise."
                                 </p>
@@ -177,17 +185,9 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                                 </div>
                                 <Phone className="size-5 text-tertiary" />
                             </a>
-
-                            {/* QR Code */}
-                            <div className="mt-4 flex flex-col items-center rounded-xl border border-secondary bg-secondary/30 p-4">
-                                <p className="text-xs font-medium text-tertiary mb-3">Scan QR Code to Pay</p>
-                                <div className="rounded-lg bg-white p-2 shadow-sm">
-                                    <img src="/qr-code.jpeg" alt="UPI QR Code" className="size-28" />
-                                </div>
-                            </div>
                         </div>
 
-                        <p className="mt-4 text-center text-xs text-tertiary">
+                        <p className="mt-6 text-center text-xs text-tertiary">
                             For any queries, call <a href="tel:+919022726250" className="font-medium text-emerald-600 hover:underline">+91 9022726250</a>
                         </p>
                     </div>
