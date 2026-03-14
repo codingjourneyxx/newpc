@@ -119,13 +119,13 @@ interface CaseStudyCardsProps {
 }
 
 export const CaseStudyCards = ({
-    title = "We've helped hundreds of global companies",
-    description = "Case studies from some of our amazing customers who are building faster.",
+    title = "Community Voices",
+    description = "Hear from our supporters who are helping build this blessed project.",
     caseStudies = defaultCaseStudies,
-    primaryButtonText = "Create account",
-    primaryButtonHref = "#",
-    secondaryButtonText = "Our customers",
-    secondaryButtonHref = "#",
+    primaryButtonText = "Donate Now",
+    primaryButtonHref = "#donate",
+    secondaryButtonText = "Learn More",
+    secondaryButtonHref = "#about",
     className,
 }: CaseStudyCardsProps) => {
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -228,14 +228,25 @@ export const CaseStudyCards = ({
             <section className={cx("overflow-hidden bg-primary py-16 md:py-24", className)}>
                 <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
                     {/* Header */}
-                    <div className="flex flex-col justify-between gap-8 lg:flex-row lg:gap-0">
-                        <div className="flex max-w-3xl flex-col gap-4 md:gap-5">
-                            <h2 className="text-display-sm font-semibold text-primary md:text-display-md">
+                    <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
+                        <div className="max-w-2xl">
+                            <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600">
                                 {title}
+                            </p>
+                            <h2 className="mt-4 font-serif text-3xl font-normal italic tracking-tight text-primary sm:text-4xl md:text-5xl">
+                                What our{" "}
+                                <span className="relative inline-block text-emerald-600">
+                                    supporters say
+                                    <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 200 6" fill="none">
+                                        <path d="M0 3C50 0.5 150 5.5 200 3" stroke="#10b981" strokeWidth="2" strokeLinecap="round" />
+                                    </svg>
+                                </span>
                             </h2>
-                            <p className="text-lg text-tertiary md:text-xl">{description}</p>
+                            <p className="mt-6 max-w-lg text-base leading-relaxed text-secondary sm:text-lg">
+                                {description}
+                            </p>
                         </div>
-                        <div className="flex flex-col-reverse gap-3 self-stretch sm:flex-row sm:self-start">
+                        <div className="flex flex-col-reverse gap-3 sm:flex-row sm:shrink-0">
                             <Button color="secondary" size="lg" href={secondaryButtonHref}>
                                 {secondaryButtonText}
                             </Button>
