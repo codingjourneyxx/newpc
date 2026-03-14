@@ -246,14 +246,14 @@ export const CaseStudyCards = ({
                                 {description}
                             </p>
                         </div>
-                        <div className="flex flex-col-reverse gap-3 sm:flex-row sm:shrink-0">
-                            <Button color="secondary" size="lg" href={secondaryButtonHref}>
+                        <div className="grid grid-cols-2 gap-3 w-full sm:w-auto sm:min-w-80">
+                            <Button color="secondary" size="lg" href={secondaryButtonHref} className="w-full justify-center">
                                 {secondaryButtonText}
                             </Button>
                             <Button
                                 size="lg"
                                 href={primaryButtonHref}
-                                className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
+                                className="w-full justify-center rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
                             >
                                 {primaryButtonText}
                             </Button>
