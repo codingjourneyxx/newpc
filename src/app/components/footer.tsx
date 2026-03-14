@@ -100,11 +100,6 @@ export const Footer = () => {
                                                 ) : (
                                                     <Link href={item.href} className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600">
                                                         {item.label}
-                                                        {"badge" in item && (
-                                                            <span className="rounded bg-emerald-50 px-1.5 py-0.5 text-xs font-medium text-emerald-600">
-                                                                {item.badge}
-                                                            </span>
-                                                        )}
                                                     </Link>
                                                 )}
                                             </li>
