@@ -5,6 +5,7 @@ import { Component4 } from "@/components/marketing/component4";
 import { Component5 } from "@/components/marketing/component5";
 import { Component6 } from "@/components/marketing/component6";
 import { Component10 } from "@/components/marketing/component10";
+import { CaseStudyCards } from "@/components/marketing/testimonials/case-study-cards";
 
 export default function CompShowPage() {
     return (
@@ -26,6 +27,9 @@ export default function CompShowPage() {
 
             {/* Component 6: Madrasa Feature Section */}
             <Component6 />
+
+            {/* Case Study Cards: Testimonials Carousel */}
+            <CaseStudyCards />
 
             {/* Component 10: Final CTA & Donation Info */}
             <Component10 />
