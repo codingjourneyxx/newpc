@@ -242,7 +242,7 @@ export const CaseStudyCards = ({
                         <div className="h-full w-full">
                             <div
                                 ref={carouselRef}
-                                className="flex max-h-full gap-6 overflow-x-auto pr-4 scrollbar-hide md:gap-8 md:pr-8"
+                                className="flex max-h-full gap-6 overflow-x-auto pr-4 md:gap-8 md:pr-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                                 style={{ cursor: "grab" }}
                                 onMouseDown={handleMouseDown}
                                 onMouseMove={handleMouseMove}
