@@ -110,12 +110,27 @@ export const Footer = () => {
                     </div>
 
                     {/* Donate CTA */}
-                    <div className="mt-10 flex items-center justify-between border-t border-secondary pt-8">
-                        <p className="text-sm text-tertiary">Support this Sadaqah Jariyah project</p>
-                        <Link href="#donate" className="group inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700">
-                            Donate Now
-                            <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
-                        </Link>
+                    <div className="mt-10 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-[1px]">
+                        <div className="flex flex-col items-center justify-between gap-4 rounded-[11px] bg-white px-6 py-5 sm:flex-row">
+                            <div className="flex items-center gap-4">
+                                <div className="flex size-12 items-center justify-center rounded-full bg-emerald-50">
+                                    <svg className="size-6 text-emerald-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p className="font-medium text-primary">Support this Sadaqah Jariyah</p>
+                                    <p className="text-sm text-tertiary">Every contribution builds your Akhirah</p>
+                                </div>
+                            </div>
+                            <Link
+                                href="#donate"
+                                className="group inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:from-emerald-700 hover:to-teal-600"
+                            >
+                                Donate Now
+                                <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
