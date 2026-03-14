@@ -57,26 +57,14 @@ const megaMenuData = {
                 title: "Masjid",
                 items: [
                     { label: "Prayer Hall", description: "Space for 500+ worshippers", href: "#masjid" },
-                    { label: "Wudu Area", description: "Ablution facilities for men & women", href: "#wudu" },
-                    { label: "Jummah Hall", description: "Friday prayer congregation", href: "#jummah" },
-                    { label: "Imam Quarters", description: "Residence for the Imam", href: "#imam" },
+                    { label: "Wudu Area", description: "Ablution facilities", href: "#wudu" },
                 ],
             },
             {
                 title: "Madrasa",
                 items: [
-                    { label: "Quran Classes", description: "Quran recitation & memorization", href: "#quran" },
+                    { label: "Quran Classes", description: "Recitation & memorization", href: "#quran" },
                     { label: "Islamic Studies", description: "Hadith, Fiqh & Seerah", href: "#studies" },
-                    { label: "Arabic Language", description: "Arabic reading & writing", href: "#arabic" },
-                ],
-            },
-            {
-                title: "Community",
-                items: [
-                    { label: "Community Hall", description: "Events & gatherings", href: "#hall" },
-                    { label: "Welfare Center", description: "Support for the needy", href: "#welfare" },
-                    { label: "Library", description: "Islamic books & resources", href: "#library" },
-                    { label: "Guest Rooms", description: "Accommodation for visitors", href: "#guest" },
                 ],
             },
         ],
@@ -88,9 +76,7 @@ const megaMenuData = {
                 title: "Donate",
                 items: [
                     { label: "One-Time Donation", description: "Any amount helps", href: "#donate" },
-                    { label: "Monthly Pledge", description: "Recurring contribution", href: "#monthly" },
-                    { label: "Zakat", description: "Fulfill your Zakat obligation", href: "#zakat" },
-                    { label: "Sadaqah", description: "Voluntary charity", href: "#sadaqah" },
+                    { label: "Zakat / Sadaqah", description: "Fulfill your obligation", href: "#zakat" },
                 ],
             },
             {
@@ -98,8 +84,6 @@ const megaMenuData = {
                 items: [
                     { label: "Share With Others", description: "Spread the word", href: "#share" },
                     { label: "Volunteer", description: "Contribute your time", href: "#volunteer" },
-                    { label: "In-Kind Donation", description: "Materials & supplies", href: "#inkind" },
-                    { label: "Sponsor a Section", description: "Fund a specific area", href: "#sponsor" },
                 ],
             },
         ],
@@ -112,16 +96,13 @@ const megaMenuData = {
                 items: [
                     { label: "Our Mission", description: "Why we are building", href: "#mission" },
                     { label: "Progress Updates", description: "Construction progress", href: "#progress" },
-                    { label: "FAQ", description: "Common questions answered", href: "#faq" },
-                    { label: "Gallery", description: "Photos & videos", href: "#gallery" },
                 ],
             },
             {
                 title: "Connect",
                 items: [
                     { label: "Contact Us", description: "Get in touch", href: "#contact" },
-                    { label: "Committee Members", description: "Meet the team", href: "#committee" },
-                    { label: "Visit Us", description: "Construction site location", href: "#location" },
+                    { label: "Visit Us", description: "Site location", href: "#location" },
                 ],
             },
         ],
