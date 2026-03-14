@@ -110,24 +110,26 @@ export const Footer = () => {
                     </div>
 
                     {/* Donate CTA */}
-                    <div className="mt-10 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-8 text-center sm:px-10 sm:py-10">
-                        <h3 className="font-serif text-2xl font-normal italic text-white md:text-3xl">
-                            Ready to contribute?
-                        </h3>
-                        <p className="mx-auto mt-3 max-w-md text-emerald-100">
-                            Every contribution, big or small, brings us closer to completing this blessed project.
-                        </p>
-                        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <div className="mt-10 flex flex-col items-center justify-between gap-6 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-6 sm:flex-row sm:px-8">
+                        <div>
+                            <h3 className="font-serif text-xl font-normal italic text-white md:text-2xl">
+                                Ready to contribute?
+                            </h3>
+                            <p className="mt-1 text-sm text-emerald-100">
+                                Every contribution, big or small, brings us closer to completing this blessed project.
+                            </p>
+                        </div>
+                        <div className="flex shrink-0 gap-3">
                             <Link
                                 href="#donate"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-emerald-600 shadow-md transition hover:bg-emerald-50"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-emerald-600 shadow-md transition hover:bg-emerald-50"
                             >
                                 Donate Now
                                 <ArrowRight className="size-4" />
                             </Link>
                             <Link
                                 href="/"
-                                className="inline-flex items-center justify-center rounded-lg bg-white/10 px-6 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm transition hover:bg-white/20"
+                                className="inline-flex items-center justify-center rounded-lg bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm transition hover:bg-white/20"
                             >
                                 Back to Home
                             </Link>
