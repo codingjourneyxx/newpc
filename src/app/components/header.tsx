@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { Copy01, CreditCard01, MessageCircle01, Phone, X } from "@untitledui/icons";
 
 // Share data
 const shareData = {
@@ -47,6 +48,154 @@ const ArrowRightIcon = () => (
         <polyline points="12 5 19 12 12 19"/>
     </svg>
 );
+
+// Donation Data
+const BANK_ACC = "10580754654";
+const UPI_ID = "thealhamdtechnologies-1@oksbi";
+
+// Donate Modal Component
+const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+    const [copiedField, setCopiedField] = useState<string | null>(null);
+
+    const handleCopy = async (text: string, field: string) => {
+        await navigator.clipboard.writeText(text);
+        setCopiedField(field);
+        setTimeout(() => setCopiedField(null), 2000);
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
+
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+
+            {/* Modal */}
+            <div className="relative w-full max-w-6xl h-[700px] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in">
+                {/* Close Button */}
+                <button
+                    onClick={onClose}
+                    className="absolute right-4 top-4 z-10 p-2 rounded-full bg-secondary hover:bg-tertiary transition-colors"
+                >
+                    <X className="size-5 text-primary" />
+                </button>
+
+                <div className="grid h-full lg:grid-cols-2">
+                    {/* Left Side - Info */}
+                    <div className="relative hidden lg:flex flex-col justify-center p-10 bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500">
+                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
+                        <div className="relative">
+                            <h2 className="font-serif text-3xl font-normal italic text-white">
+                                Support this blessed project
+                            </h2>
+                            <p className="mt-4 text-emerald-100 leading-relaxed">
+                                Your donation is a Sadaqah Jariyah - an ongoing charity that will benefit you even after your lifetime. Every rupee contributes to building a house of Allah.
+                            </p>
+                            <div className="mt-8 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                                <p className="text-sm italic text-white/90">
+                                    "Whoever builds a mosque for Allah, Allah will build for him a house in Paradise."
+                                </p>
+                                <p className="mt-2 text-xs font-medium text-emerald-200">— Prophet Muhammad ﷺ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Side - Donation Options */}
+                    <div className="flex flex-col justify-center p-6 lg:p-10">
+                        <h3 className="text-xl font-semibold text-primary lg:hidden mb-6">Support this blessed project</h3>
+                        <h3 className="text-lg font-semibold text-primary hidden lg:block">Choose a donation method</h3>
+                        <p className="mt-1 text-sm text-tertiary hidden lg:block">Click to copy the details</p>
+
+                        <div className="mt-6 space-y-3">
+                            {/* Bank Transfer */}
+                            <button
+                                onClick={() => handleCopy(BANK_ACC, "bank")}
+                                className="flex w-full items-center gap-4 rounded-xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-200 hover:bg-emerald-50/50"
+                            >
+                                <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+                                    <CreditCard01 className="size-6 text-emerald-600" />
+                                </div>
+                                <div className="min-w-0 flex-1 text-left">
+                                    <p className="text-sm font-semibold text-primary">Bank Transfer (SBI)</p>
+                                    <p className="text-sm text-tertiary">A/C: {BANK_ACC}</p>
+                                    <p className="text-xs text-tertiary">IFSC: SBIN0003320</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    {copiedField === "bank" ? (
+                                        <span className="text-xs font-medium text-emerald-600">Copied!</span>
+                                    ) : (
+                                        <Copy01 className="size-5 text-tertiary" />
+                                    )}
+                                </div>
+                            </button>
+
+                            {/* UPI */}
+                            <button
+                                onClick={() => handleCopy(UPI_ID, "upi")}
+                                className="flex w-full items-center gap-4 rounded-xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-200 hover:bg-emerald-50/50"
+                            >
+                                <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+                                    <img src="/upi-logo.png" alt="UPI" className="size-7" />
+                                </div>
+                                <div className="min-w-0 flex-1 text-left">
+                                    <p className="text-sm font-semibold text-primary">G-Pay / UPI</p>
+                                    <p className="truncate text-sm text-tertiary">{UPI_ID}</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    {copiedField === "upi" ? (
+                                        <span className="text-xs font-medium text-emerald-600">Copied!</span>
+                                    ) : (
+                                        <Copy01 className="size-5 text-tertiary" />
+                                    )}
+                                </div>
+                            </button>
+
+                            {/* WhatsApp Contact */}
+                            <a
+                                href="https://wa.me/919022726250"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex w-full items-center gap-4 rounded-xl border border-secondary bg-primary p-4 transition duration-100 ease-linear hover:border-emerald-200 hover:bg-emerald-50/50"
+                            >
+                                <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-xl bg-green-50">
+                                    <MessageCircle01 className="size-6 text-green-600" />
+                                </div>
+                                <div className="min-w-0 flex-1 text-left">
+                                    <p className="text-sm font-semibold text-primary">Contact on WhatsApp</p>
+                                    <p className="text-sm text-tertiary">Nibboo Hassan Khan</p>
+                                </div>
+                                <Phone className="size-5 text-tertiary" />
+                            </a>
+
+                            {/* QR Code */}
+                            <div className="mt-4 flex flex-col items-center rounded-xl border border-secondary bg-secondary/30 p-4">
+                                <p className="text-xs font-medium text-tertiary mb-3">Scan QR Code to Pay</p>
+                                <div className="rounded-lg bg-white p-2 shadow-sm">
+                                    <img src="/qr-code.jpeg" alt="UPI QR Code" className="size-28" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="mt-4 text-center text-xs text-tertiary">
+                            For any queries, call <a href="tel:+919022726250" className="font-medium text-emerald-600 hover:underline">+91 9022726250</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 // Menu Data
 const megaMenuData = {
@@ -218,6 +367,7 @@ export const Header = () => {
     const [slideDirection, setSlideDirection] = useState<"left" | "right" | "none">("none");
     const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
     const [shareStatus, setShareStatus] = useState<"idle" | "copied">("idle");
+    const [donateModalOpen, setDonateModalOpen] = useState(false);
     const headerRef = useRef<HTMLElement>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const prevMenuRef = useRef<string | null>(null);
@@ -342,12 +492,12 @@ export const Header = () => {
                             >
                                 {shareStatus === "copied" ? "Link Copied!" : "Share"}
                             </button>
-                            <Link
-                                href="#donate"
+                            <button
+                                onClick={() => setDonateModalOpen(true)}
                                 className="px-5 py-2.5 text-sm font-medium bg-emerald-600 text-white rounded transition-all hover:bg-emerald-700"
                             >
                                 Donate Now
-                            </Link>
+                            </button>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -414,13 +564,15 @@ export const Header = () => {
                                         >
                                             {shareStatus === "copied" ? "Link Copied!" : "Share With Others"}
                                         </button>
-                                        <Link
-                                            href="#donate"
+                                        <button
+                                            onClick={() => {
+                                                setMobileMenuOpen(false);
+                                                setDonateModalOpen(true);
+                                            }}
                                             className="block w-full px-4 py-3 text-base font-medium text-center bg-emerald-600 text-white rounded-lg"
-                                            onClick={() => setMobileMenuOpen(false)}
                                         >
                                             Donate Now
-                                        </Link>
+                                        </button>
                                     </div>
                                 </div>
                             ) : (
@@ -511,6 +663,9 @@ export const Header = () => {
                     animation: fadeIn 0.2s ease-out forwards;
                 }
             `}</style>
+
+            {/* Donate Modal */}
+            <DonateModal isOpen={donateModalOpen} onClose={() => setDonateModalOpen(false)} />
         </header>
     );
 };
