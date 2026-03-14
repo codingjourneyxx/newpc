@@ -23,7 +23,7 @@ const defaultCaseStudies: CaseStudy[] = [
         logo: "https://www.untitledui.com/logos/logotype/white/layers.svg",
         quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects faster.",
         href: "#",
-        bgColor: "bg-error-600",
+        bgColor: "bg-emerald-600",
         avatar: "https://www.untitledui.com/images/avatars/olivia-rhye",
         author: "Olivia Rhye",
         role: "Product Designer",
@@ -34,7 +34,7 @@ const defaultCaseStudies: CaseStudy[] = [
         logo: "https://www.untitledui.com/logos/logotype/white/sisyphus.svg",
         quote: "We've been using Untitled to kick start every new project and can't work without it.",
         href: "#",
-        bgColor: "bg-error-700",
+        bgColor: "bg-emerald-700",
         avatar: "https://www.untitledui.com/images/avatars/phoenix-baker",
         author: "Phoenix Baker",
         role: "Engineering Lead",
@@ -45,7 +45,7 @@ const defaultCaseStudies: CaseStudy[] = [
         logo: "https://www.untitledui.com/logos/logotype/white/capsule.svg",
         quote: "Love the simplicity of the service and the prompt customer support.",
         href: "#",
-        bgColor: "bg-error-500",
+        bgColor: "bg-teal-600",
         avatar: "https://www.untitledui.com/images/avatars/lana-steiner",
         author: "Lana Steiner",
         role: "VP of Sales",
@@ -56,7 +56,7 @@ const defaultCaseStudies: CaseStudy[] = [
         logo: "https://www.untitledui.com/logos/logotype/white/catalog.svg",
         quote: "Untitled has saved us thousands of hours of work. We're able to spin up projects faster.",
         href: "#",
-        bgColor: "bg-error-800",
+        bgColor: "bg-emerald-800",
         avatar: "https://www.untitledui.com/images/avatars/demi-wilkinson",
         author: "Demi Wilkinson",
         role: "Product Manager",
@@ -227,7 +227,11 @@ export const CaseStudyCards = ({
                             <Button color="secondary" size="lg" href={secondaryButtonHref}>
                                 {secondaryButtonText}
                             </Button>
-                            <Button color="primary" size="lg" href={primaryButtonHref}>
+                            <Button
+                                size="lg"
+                                href={primaryButtonHref}
+                                className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
+                            >
                                 {primaryButtonText}
                             </Button>
                         </div>
