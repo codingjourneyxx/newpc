@@ -87,14 +87,14 @@ export default function ContactPage() {
             <Header />
 
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-16 md:py-24">
+            <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-16 md:py-16">
                 <div className="pointer-events-none absolute inset-0 opacity-10" style={dotPatternStyle} />
                 <div className="relative mx-auto max-w-7xl px-4 md:px-8">
                     <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
                         <MessageCircle01 className="size-4" />
                         Get in Touch
                     </span>
-                    <h1 className="mt-6 max-w-2xl font-serif text-4xl font-normal italic tracking-tight text-white md:text-5xl lg:text-6xl">
+                    <h1 className="mt-6 max-w-3xl font-serif text-4xl font-normal italic tracking-tight text-white md:text-5xl lg:text-6xl">
                         We'd love to hear from you
                     </h1>
                     <p className="mt-4 max-w-2xl text-lg text-white/90">
