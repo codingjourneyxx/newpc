@@ -46,7 +46,7 @@ const Testimonial = ({ quote, author, role, badge }: TestimonialProps) => (
     </aside>
 );
 
-interface FeatureSectionProps {
+interface FeatureLayoutProps {
     badge?: string;
     title: string;
     description: string;
@@ -60,7 +60,7 @@ interface FeatureSectionProps {
     testimonialImage?: string;
 }
 
-export const FeatureSection = ({
+export const FeatureLayout = ({
     badge,
     title,
     description,
@@ -71,7 +71,7 @@ export const FeatureSection = ({
     className,
     image,
     testimonialImage,
-}: FeatureSectionProps) => {
+}: FeatureLayoutProps) => {
     return (
         <section className={cx("w-full", className)}>
             <div className="mx-auto max-w-7xl border-l border-r border-secondary px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
@@ -182,4 +182,4 @@ export const FeatureSection = ({
     );
 };
 
-export default FeatureSection;
+export default FeatureLayout;

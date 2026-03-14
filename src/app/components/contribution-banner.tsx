@@ -21,11 +21,11 @@ const FeatureCard = ({ icon: Icon, title, description }: Omit<FeatureCardProps, 
     </div>
 );
 
-interface Component3Props {
+interface ContributionBannerProps {
     className?: string;
 }
 
-export const Component3 = ({ className }: Component3Props) => {
+export const ContributionBanner = ({ className }: ContributionBannerProps) => {
     const features = [
         {
             icon: Building07,
@@ -121,4 +121,4 @@ export const Component3 = ({ className }: Component3Props) => {
     );
 };
 
-export default Component3;
+export default ContributionBanner;

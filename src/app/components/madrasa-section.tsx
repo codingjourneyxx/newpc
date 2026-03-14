@@ -1,14 +1,14 @@
 "use client";
 
 import { BookOpen01, GraduationHat01, Users01, Star01 } from "@untitledui/icons";
-import { FeatureSection } from "./feature-section";
+import { FeatureLayout } from "./feature-layout";
 import { cx } from "@/utils/cx";
 
-interface Component6Props {
+interface MadrasaSectionProps {
     className?: string;
 }
 
-export const Component6 = ({ className }: Component6Props) => {
+export const MadrasaSection = ({ className }: MadrasaSectionProps) => {
     const tabs = [
         { icon: BookOpen01, label: "Quran Classes", isActive: false },
         { icon: GraduationHat01, label: "Islamic Studies", isActive: true },
@@ -17,7 +17,7 @@ export const Component6 = ({ className }: Component6Props) => {
     ];
 
     return (
-        <FeatureSection
+        <FeatureLayout
             badge="Madrasa"
             title="Nurturing young minds with Islamic education"
             description="Our Madrasa will provide quality Islamic education including Quran memorization, Hadith studies, Fiqh, and Arabic language for children and adults."
@@ -36,4 +36,4 @@ export const Component6 = ({ className }: Component6Props) => {
     );
 };
 
-export default Component6;
+export default MadrasaSection;

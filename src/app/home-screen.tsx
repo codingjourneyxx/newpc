@@ -1,44 +1,44 @@
 "use client";
 
-import { Component1 } from "@/app/components/component1";
-import { Component3 } from "@/app/components/component3";
-import { Component4 } from "@/app/components/component4";
-import { Component5 } from "@/app/components/component5";
-import { Component6 } from "@/app/components/component6";
-import { Component10 } from "@/app/components/component10";
+import { HeroSectionWrapper } from "@/app/components/hero-section";
+import { ContributionBanner } from "@/app/components/contribution-banner";
+import { ProjectFeatures } from "@/app/components/project-features";
+import { MasjidSection } from "@/app/components/masjid-section";
+import { MadrasaSection } from "@/app/components/madrasa-section";
+import { DonationInfo } from "@/app/components/donation-info";
 import { CaseStudyCards } from "@/components/marketing/testimonials/case-study-cards";
 import { ContentDivider } from "@/components/application/content-divider/content-divider";
 
 export default function HomePage() {
     return (
         <div className="min-h-screen bg-primary">
-            {/* Component 1: Hero Section - Masjid & Madrasa Appeal */}
-            <Component1 />
+            {/* Hero Section - Masjid & Madrasa Appeal */}
+            <HeroSectionWrapper />
 
             <ContentDivider />
 
-            {/* Component 3: Community Messages & Duas */}
-            <Component3 />
+            {/* Contribution Banner - Community Messages & Duas */}
+            <ContributionBanner />
 
-            {/* Component 4: Project Features (Masjid, Madrasa, etc.) */}
-            <Component4 />
+            {/* Project Features (Masjid, Madrasa, etc.) */}
+            <ProjectFeatures />
 
             <ContentDivider />
 
-            {/* Component 5: Masjid Feature Section */}
-            <Component5 />
+            {/* Masjid Feature Section */}
+            <MasjidSection />
             <ContentDivider />
 
-            {/* Component 6: Madrasa Feature Section */}
-            <Component6 />
+            {/* Madrasa Feature Section */}
+            <MadrasaSection />
             <ContentDivider />
 
             {/* Case Study Cards: Testimonials Carousel */}
             <CaseStudyCards />
             <ContentDivider />
 
-            {/* Component 10: Final CTA & Donation Info */}
-            <Component10 />
+            {/* Final CTA & Donation Info */}
+            <DonationInfo />
         </div>
     );
 }

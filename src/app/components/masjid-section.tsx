@@ -1,14 +1,14 @@
 "use client";
 
 import { Home02, Clock, Users01, BookOpen01 } from "@untitledui/icons";
-import { FeatureSection } from "./feature-section";
+import { FeatureLayout } from "./feature-layout";
 import { cx } from "@/utils/cx";
 
-interface Component5Props {
+interface MasjidSectionProps {
     className?: string;
 }
 
-export const Component5 = ({ className }: Component5Props) => {
+export const MasjidSection = ({ className }: MasjidSectionProps) => {
     const tabs = [
         { icon: Home02, label: "Prayer Hall", isActive: false },
         { icon: Clock, label: "5 Daily Prayers", isActive: true },
@@ -17,7 +17,7 @@ export const Component5 = ({ className }: Component5Props) => {
     ];
 
     return (
-        <FeatureSection
+        <FeatureLayout
             badge="Masjid"
             title="A sacred space for worship and reflection"
             description="Our mosque will accommodate 500+ worshippers for daily prayers, Jummah congregation, and special prayers during Ramadan and Eid."
@@ -36,4 +36,4 @@ export const Component5 = ({ className }: Component5Props) => {
     );
 };
 
-export default Component5;
+export default MasjidSection;

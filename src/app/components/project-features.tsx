@@ -44,11 +44,11 @@ const TabButton = ({ icon: Icon, label, isActive, isHighlighted }: TabButtonProp
     </button>
 );
 
-interface Component4Props {
+interface ProjectFeaturesProps {
     className?: string;
 }
 
-export const Component4 = ({ className }: Component4Props) => {
+export const ProjectFeatures = ({ className }: ProjectFeaturesProps) => {
     const features = [
         {
             icon: Home02,
@@ -126,4 +126,4 @@ export const Component4 = ({ className }: Component4Props) => {
     );
 };
 
-export default Component4;
+export default ProjectFeatures;

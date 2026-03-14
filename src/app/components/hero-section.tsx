@@ -258,7 +258,7 @@ const HeroSection = ({
     );
 };
 
-interface Component1Props {
+interface HeroSectionWrapperProps {
     /** Announcement banner text */
     announcementText?: string;
     /** Announcement banner href */
@@ -267,11 +267,11 @@ interface Component1Props {
     className?: string;
 }
 
-export const Component1 = ({
+export const HeroSectionWrapper = ({
     announcementText = "Join our community appeal for Masjid & Madrasa",
     announcementHref = "#donate",
     className,
-}: Component1Props) => {
+}: HeroSectionWrapperProps) => {
     return (
         <div className={cx("min-h-screen bg-primary", className)}>
             {/* Header */}
@@ -285,4 +285,4 @@ export const Component1 = ({
     );
 };
 
-export default Component1;
+export default HeroSectionWrapper;

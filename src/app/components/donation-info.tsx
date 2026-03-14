@@ -3,7 +3,7 @@
 import { Heart, Phone, Copy01, Building07, CreditCard01, MessageCircle01, Link01, Download01 } from "@untitledui/icons";
 import { cx } from "@/utils/cx";
 
-interface Component10Props {
+interface DonationInfoProps {
     className?: string;
 }
 
@@ -15,7 +15,7 @@ const InfoRow = ({ label, value, highlight }: { label: string; value: string; hi
     </div>
 );
 
-export const Component10 = ({ className }: Component10Props) => {
+export const DonationInfo = ({ className }: DonationInfoProps) => {
     return (
         <section className={cx("w-full bg-primary", className)}>
             <div className="mx-auto max-w-7xl border-l border-r border-secondary">
@@ -149,4 +149,4 @@ export const Component10 = ({ className }: Component10Props) => {
     );
 };
 
-export default Component10;
+export default DonationInfo;
