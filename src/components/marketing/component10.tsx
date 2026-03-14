@@ -32,20 +32,27 @@ export const Component10 = ({ className }: Component10Props) => {
 
                     {/* Headline */}
                     <div className="relative">
-                        <h2 className="text-center font-serif text-2xl font-normal italic tracking-tight text-primary sm:text-3xl md:text-4xl lg:text-5xl">
-                            Be part of this <span className="text-emerald-600">blessed journey</span>
-                        </h2>
-                        <h2 className="mt-2 text-center font-serif text-xl font-normal italic tracking-tight text-emerald-700 sm:text-2xl md:text-3xl">
-                            इस मुबारक सफर का हिस्सा बनें
-                        </h2>
-
-                        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-secondary sm:mt-6 sm:text-base">
-                            Your contribution, no matter how small, will help build a place of worship and learning for our community.
+                        {/* Top Label */}
+                        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600">
+                            Community Appeal
                         </p>
 
-                        <p className="mx-auto mt-4 max-w-xl text-center text-sm font-medium text-emerald-600 sm:text-base">
-                            "May Allah reward you with goodness" - Jazakallahu Khairan
+                        {/* Main Headline */}
+                        <h2 className="mt-4 max-w-2xl font-serif text-3xl font-normal italic tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-6xl">
+                            Be part of this{" "}
+                            <span className="relative inline-block text-emerald-600">
+                                blessed journey
+                                <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 200 6" fill="none">
+                                    <path d="M0 3C50 0.5 150 5.5 200 3" stroke="#10b981" strokeWidth="2" strokeLinecap="round" />
+                                </svg>
+                            </span>
+                        </h2>
+
+                        {/* Description */}
+                        <p className="mt-6 max-w-lg text-base leading-relaxed text-secondary sm:text-lg">
+                            Your contribution helps build a place of worship and learning for our community.
                         </p>
+
                     </div>
 
                     {/* Card */}
