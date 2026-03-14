@@ -100,7 +100,7 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                             <div className="mb-6 flex flex-col items-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-4">
                                 <p className="text-xs font-medium text-white/80 mb-3">Scan QR Code to Pay</p>
                                 <div className="rounded-lg bg-white p-2 shadow-lg">
-                                    <img src="/qr-code.jpeg" alt="UPI QR Code" className="size-32" />
+                                    <img src="/qr-code.jpeg" alt="UPI QR Code" className="size-80" />
                                 </div>
                             </div>
 
@@ -110,12 +110,7 @@ const DonateModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                             <p className="mt-4 text-emerald-100 leading-relaxed">
                                 Your donation is a Sadaqah Jariyah - an ongoing charity that will benefit you even after your lifetime. Every rupee contributes to building a house of Allah.
                             </p>
-                            <div className="mt-6 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-                                <p className="text-sm italic text-white/90">
-                                    "Whoever builds a mosque for Allah, Allah will build for him a house in Paradise."
-                                </p>
-                                <p className="mt-2 text-xs font-medium text-emerald-200">— Prophet Muhammad ﷺ</p>
-                            </div>
+                            
                         </div>
                     </div>
 
