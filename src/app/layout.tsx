@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { RouteProvider } from "@/providers/router-provider";
 import { Theme } from "@/providers/theme";
+import { DonateModalProvider } from "@/app/components/donate-modal";
 import "@/styles/globals.css";
 import { cx } from "@/utils/cx";
 
@@ -30,7 +31,9 @@ export default function RootLayout({
         <html lang="en" className="light-mode">
             <body className={cx(inter.variable, "bg-primary antialiased")}>
                 <RouteProvider>
-                    <Theme>{children}</Theme>
+                    <Theme>
+                        <DonateModalProvider>{children}</DonateModalProvider>
+                    </Theme>
                 </RouteProvider>
             </body>
         </html>

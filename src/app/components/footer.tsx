@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "@untitledui/icons";
+import { useDonateModal } from "@/app/components/donate-modal";
 
 const links = {
     project: {
@@ -49,6 +50,7 @@ const dotPattern = {
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const { openModal } = useDonateModal();
 
     return (
         <footer className="bg-[#f9fafb]" style={dotPattern}>
@@ -88,14 +90,23 @@ export const Footer = () => {
                                     <ul className="mt-4 space-y-3">
                                         {items.map((item) => (
                                             <li key={item.label}>
-                                                <Link href={item.href} className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600">
-                                                    {item.label}
-                                                    {"badge" in item && (
-                                                        <span className="rounded bg-emerald-50 px-1.5 py-0.5 text-xs font-medium text-emerald-600">
-                                                            {item.badge}
-                                                        </span>
-                                                    )}
-                                                </Link>
+                                                {item.href === "#donate" ? (
+                                                    <button
+                                                        onClick={openModal}
+                                                        className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600"
+                                                    >
+                                                        {item.label}
+                                                    </button>
+                                                ) : (
+                                                    <Link href={item.href} className="inline-flex items-center gap-2 text-sm text-tertiary transition hover:text-emerald-600">
+                                                        {item.label}
+                                                        {"badge" in item && (
+                                                            <span className="rounded bg-emerald-50 px-1.5 py-0.5 text-xs font-medium text-emerald-600">
+                                                                {item.badge}
+                                                            </span>
+                                                        )}
+                                                    </Link>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>
@@ -115,13 +126,13 @@ export const Footer = () => {
                             </p>
                         </div>
                         <div className="flex shrink-0 gap-3">
-                            <Link
-                                href="#donate"
+                            <button
+                                onClick={openModal}
                                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-emerald-600 shadow-md transition hover:bg-emerald-50"
                             >
                                 Donate Now
                                 <ArrowRight className="size-4" />
-                            </Link>
+                            </button>
                             <Link
                                 href="/"
                                 className="inline-flex items-center justify-center rounded-lg bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 backdrop-blur-sm transition hover:bg-white/20"

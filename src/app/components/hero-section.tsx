@@ -3,6 +3,7 @@
 import { Link01, Copy01, Download01, ShieldTick, CheckVerified01, Receipt, ArrowUpRight } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Header } from "@/app/components/header";
+import { useDonateModal } from "@/app/components/donate-modal";
 import { cx } from "@/utils/cx";
 
 // Hoisted static JSX elements
@@ -19,7 +20,10 @@ const trustBadges = [
 
 const UPI_ID = "thealhamdtechnologies-1@oksbi";
 
-export const HeroSectionWrapper = ({ className }: { className?: string }) => (
+export const HeroSectionWrapper = ({ className }: { className?: string }) => {
+    const { openModal } = useDonateModal();
+
+    return (
     <div className={cx("min-h-screen bg-primary", className)}>
         <Header />
         <div className="mx-auto max-w-7xl border-l border-r border-secondary">
@@ -44,7 +48,7 @@ export const HeroSectionWrapper = ({ className }: { className?: string }) => (
                             </div>
 
                             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
-                                <Button href="#donate" size="xl" iconTrailing={<ArrowUpRight data-icon className="!text-white" />} className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600">
+                                <Button onClick={openModal} size="xl" iconTrailing={<ArrowUpRight data-icon className="!text-white" />} className="rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600">
                                     Donate Now
                                 </Button>
                                 <Button href="#about" color="secondary" size="xl" iconTrailing={ArrowUpRight} className="rounded-lg">
@@ -116,6 +120,7 @@ export const HeroSectionWrapper = ({ className }: { className?: string }) => (
             </section>
         </div>
     </div>
-);
+    );
+};
 
 export default HeroSectionWrapper;

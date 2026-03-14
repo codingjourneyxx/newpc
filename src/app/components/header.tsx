@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Copy01, CreditCard01, MessageCircle01, Phone, X } from "@untitledui/icons";
+import { useDonateModal } from "@/app/components/donate-modal";
 
 // Share data
 const shareData = {

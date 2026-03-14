@@ -2,6 +2,7 @@
 
 import { useRef, useState, useCallback } from "react";
 import { Button } from "@/components/base/buttons/button";
+import { useDonateModal } from "@/app/components/donate-modal";
 import { cx } from "@/utils/cx";
 
 type CaseStudy = {
@@ -168,6 +169,7 @@ export const CaseStudyCards = ({
     secondaryButtonHref = "#about",
     className,
 }: CaseStudyCardsProps) => {
+    const { openModal } = useDonateModal();
     const carouselRef = useRef<HTMLDivElement>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -290,7 +292,7 @@ export const CaseStudyCards = ({
                             </Button>
                             <Button
                                 size="lg"
-                                href={primaryButtonHref}
+                                onClick={openModal}
                                 className="w-full justify-center rounded-lg bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-600"
                             >
                                 {primaryButtonText}
